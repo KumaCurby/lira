@@ -1,0 +1,335 @@
+[
+  {
+    "id": "corpus-matin-lea",
+    "title": "Le matin de Léa",
+    "difficulty": 1,
+    "scanTarget": "vélo",
+    "body": "Léa se réveille à sept heures. Elle ouvre les volets et regarde le ciel gris. Après un bol de céréales, elle enfile son manteau rouge.\n\nPour aller à l'école, Léa prend son vélo. Elle roule doucement dans la petite rue. Devant la boulangerie, l'odeur du pain chaud la fait sourire.",
+    "questions": [
+      {
+        "prompt": "À quelle heure Léa se réveille-t-elle ?",
+        "options": [
+          "Six heures",
+          "Sept heures",
+          "Huit heures"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "De quelle couleur est son manteau ?",
+        "options": [
+          "Bleu",
+          "Vert",
+          "Rouge"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "prompt": "Comment Léa va-t-elle à l'école ?",
+        "options": [
+          "À pied",
+          "En vélo",
+          "En bus"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "corpus-abeilles",
+    "title": "Les abeilles",
+    "difficulty": 2,
+    "scanTarget": "reine",
+    "body": "Les abeilles vivent en colonie dans une ruche. Chaque ruche abrite une seule reine, des milliers d'ouvrières et quelques faux bourdons. Les ouvrières récoltent le nectar des fleurs pour fabriquer le miel.\n\nEn butinant, les abeilles transportent le pollen d'une fleur à l'autre. Cette pollinisation permet à de nombreuses plantes de produire des fruits. Sans les abeilles, une grande partie de notre alimentation disparaîtrait.",
+    "questions": [
+      {
+        "prompt": "Combien de reines vivent dans une ruche ?",
+        "options": [
+          "Une seule",
+          "Une dizaine",
+          "Autant que d'ouvrières"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Que fabriquent les ouvrières avec le nectar ?",
+        "options": [
+          "De la cire",
+          "Du miel",
+          "Du pollen"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "À quoi sert la pollinisation ?",
+        "options": [
+          "À produire des fruits",
+          "À chauffer la ruche",
+          "À nourrir la reine"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "corpus-gutenberg",
+    "title": "L'imprimerie de Gutenberg",
+    "difficulty": 3,
+    "scanTarget": "Mayence",
+    "body": "Au milieu du XVe siècle, l'Allemand Johannes Gutenberg met au point un système d'impression à caractères mobiles. Installé à Mayence, il assemble des lettres en métal réutilisables pour composer des pages entières.\n\nCette invention bouleverse la diffusion du savoir. Les livres, jusque-là recopiés à la main par les moines, peuvent désormais être produits en grand nombre. En quelques décennies, l'imprimerie se répand dans toute l'Europe et accélère la circulation des idées.",
+    "questions": [
+      {
+        "prompt": "Quel procédé Gutenberg met-il au point ?",
+        "options": [
+          "La reliure",
+          "Les caractères mobiles",
+          "Le papier"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Dans quelle ville s'installe-t-il ?",
+        "options": [
+          "Strasbourg",
+          "Paris",
+          "Mayence"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "prompt": "Comment les livres étaient-ils produits auparavant ?",
+        "options": [
+          "Recopiés à la main",
+          "Imprimés en usine",
+          "Gravés sur bois"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "corpus-oceans-climat",
+    "title": "Les océans et le climat",
+    "difficulty": 4,
+    "scanTarget": "courants",
+    "body": "Les océans jouent un rôle déterminant dans la régulation du climat planétaire. En absorbant une part considérable de la chaleur et du dioxyde de carbone émis par les activités humaines, ils tempèrent le réchauffement de l'atmosphère.\n\nCependant, cette absorption a un coût. L'eau se réchauffe, se dilate et contribue à l'élévation du niveau des mers. Les courants marins, qui redistribuent la chaleur du globe, pourraient être perturbés, entraînant des conséquences en cascade sur les écosystèmes et les sociétés humaines.",
+    "questions": [
+      {
+        "prompt": "Qu'absorbent principalement les océans ?",
+        "options": [
+          "De la chaleur et du CO2",
+          "Uniquement du sel",
+          "De l'oxygène"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Pourquoi le niveau des mers s'élève-t-il ?",
+        "options": [
+          "L'eau se dilate en se réchauffant",
+          "Il pleut davantage",
+          "Les fleuves débordent"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Qu'est-ce qui redistribue la chaleur du globe ?",
+        "options": [
+          "Les courants marins",
+          "Les marées",
+          "Les vagues"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "corpus-grands-fonds",
+    "title": "Les grands fonds marins",
+    "difficulty": 3,
+    "scanTarget": "bioluminescence",
+    "body": "Au-delà de deux cents mètres de profondeur, la lumière du soleil ne pénètre presque plus dans l'océan. Commence alors le domaine des grands fonds, le plus vaste habitat de la planète et l'un des moins connus. La température y avoisine quelques degrés seulement, la pression y est écrasante, et l'obscurité y règne en maître. Longtemps, on a cru ces abysses déserts ; on sait aujourd'hui qu'ils abritent une vie foisonnante.\n\nPour survivre sans lumière, les animaux ont développé des stratégies étonnantes. Beaucoup produisent eux-mêmes leur propre lumière : ce phénomène, appelé bioluminescence, sert à attirer des proies, à communiquer ou à effrayer un prédateur. D'autres se nourrissent de la « neige marine », cette pluie continue de débris qui descend lentement des eaux de surface vers le fond.\n\nAutour des sources hydrothermales, où jaillit une eau brûlante chargée de minéraux, prospèrent même des écosystèmes entiers qui ne doivent rien au soleil : ils tirent leur énergie de la chimie des roches. Explorer ces profondeurs reste un défi. Les submersibles capables d'y descendre sont rares, et chaque plongée révèle souvent des espèces encore inconnues de la science.",
+    "questions": [
+      {
+        "prompt": "À partir de quelle profondeur la lumière du soleil disparaît-elle presque ?",
+        "options": [
+          "Deux cents mètres",
+          "Dix mètres",
+          "Deux mille mètres"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Qu'est-ce que la bioluminescence ?",
+        "options": [
+          "La lumière produite par les animaux eux-mêmes",
+          "Un courant marin profond",
+          "Une variété d'algue"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "D'où les écosystèmes des sources hydrothermales tirent-ils leur énergie ?",
+        "options": [
+          "De la chimie des roches",
+          "De la lumière du soleil",
+          "Du plancton de surface"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "corpus-cafe",
+    "title": "L'histoire du café",
+    "difficulty": 3,
+    "scanTarget": "Éthiopie",
+    "body": "L'histoire du café commence, dit-on, en Éthiopie. Une légende raconte qu'un berger remarqua que ses chèvres devenaient étonnamment vives après avoir brouté les fruits rouges d'un certain arbuste. Intrigués, des moines auraient alors préparé une boisson à partir de ces grains pour rester éveillés durant leurs longues prières. Vraie ou non, cette histoire situe le berceau du caféier dans les hauts plateaux d'Afrique de l'Est.\n\nDe là, le café gagna la péninsule Arabique. Au Yémen, on le cultiva véritablement et l'on mit au point l'art de torréfier puis de moudre les grains. Bientôt s'ouvrirent les premières maisons du café, lieux animés où l'on se retrouvait pour discuter, jouer et s'informer. La boisson se répandit dans tout l'Empire ottoman, puis, au fil des échanges, jusqu'en Europe.\n\nLe succès fut tel que les grandes puissances cherchèrent à cultiver le caféier dans leurs colonies tropicales. Aujourd'hui, le café est l'une des boissons les plus consommées au monde et l'une des matières premières les plus échangées. Derrière chaque tasse se cache une longue chaîne de gestes : la cueillette, le séchage, la torréfaction et la mouture, héritée de siècles d'expérience.",
+    "questions": [
+      {
+        "prompt": "Dans quelle région situe-t-on l'origine du café ?",
+        "options": [
+          "En Éthiopie",
+          "Au Brésil",
+          "En Italie"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Qu'étaient les premières « maisons du café » ?",
+        "options": [
+          "Des lieux de rencontre et de discussion",
+          "De grandes plantations",
+          "Des navires marchands"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Que représente le café aujourd'hui ?",
+        "options": [
+          "Une des boissons les plus consommées au monde",
+          "Un produit réservé aux médecins",
+          "Une invention récente"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "corpus-mots-melanges",
+    "title": "Le tour de passe-passe du cerveau",
+    "difficulty": 2,
+    "scanTarget": "typoglycémie",
+    "body": "Voici un phénomène étonnant, souvent évoqué à propos de la lecture. Quand on mélange les lettres à l'intérieur d'un mot, mais qu'on laisse la première et la dernière lettre à leur place, la plupart des gens continuent à lire presque normalement. Le cerveau ne déchiffre pas chaque lettre l'une après l'autre : il reconnaît le mot entier par sa forme générale et par le contexte de la phrase.\n\nCette astuce a toutefois ses limites. Elle fonctionne surtout avec des mots courants et des phrases familières ; les mots longs ou techniques deviennent vite illisibles. On l'attribue parfois à une étude de Cambridge, mais cette référence est en réalité une légende : aucune recherche de ce type n'a jamais été publiée. Le phénomène, lui, est bien réel et porte un nom : la typoglycémie.",
+    "questions": [
+      {
+        "prompt": "Quelles lettres d'un mot restent à leur place ?",
+        "options": [
+          "La première et la dernière",
+          "Toutes les voyelles",
+          "Aucune, elles sont toutes déplacées"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Comment le cerveau reconnaît-il un mot mélangé ?",
+        "options": [
+          "En l'épelant lettre par lettre",
+          "Par sa forme générale et le contexte",
+          "En le lisant à l'envers"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Avec quels mots l'astuce fonctionne-t-elle le mieux ?",
+        "options": [
+          "Les mots longs et techniques",
+          "Les mots courants et familiers",
+          "Les nombres et les sigles"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Que dit le texte de l'« étude de Cambridge » ?",
+        "options": [
+          "Qu'elle a prouvé le phénomène en 2003",
+          "Qu'elle est une légende jamais publiée",
+          "Qu'elle portait sur cinq cents étudiants"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "corpus-bibliotheque",
+    "title": "La bibliothèque du village",
+    "difficulty": 2,
+    "scanTarget": "livres",
+    "body": "Chaque samedi matin, la petite bibliothèque du village ouvre ses portes. Les enfants y viennent choisir des livres, s'installer dans les fauteuils et lire au calme. La bibliothécaire, madame Roux, conseille chacun selon ses goûts.\n\nOn y trouve des romans, des bandes dessinées et de vieux atlas. L'après-midi, un club de lecture se réunit autour d'un thé pour parler des histoires découvertes pendant la semaine.",
+    "questions": [
+      {
+        "prompt": "Quand la bibliothèque ouvre-t-elle ?",
+        "options": [
+          "Le samedi matin",
+          "Le dimanche soir",
+          "Tous les jours"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Qui conseille les lecteurs ?",
+        "options": [
+          "Le maire",
+          "Madame Roux",
+          "Un enfant"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Que fait le club de lecture l'après-midi ?",
+        "options": [
+          "Il range les livres",
+          "Il parle des histoires autour d'un thé",
+          "Il ferme la bibliothèque"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "corpus-marees",
+    "title": "Les marées",
+    "difficulty": 4,
+    "scanTarget": "Lune",
+    "body": "Deux fois par jour, la mer monte puis se retire : ce sont les marées. Elles résultent surtout de l'attraction de la Lune, et dans une moindre mesure de celle du Soleil, sur les masses d'eau des océans.\n\nQuand la Lune, la Terre et le Soleil sont alignés, les forces s'additionnent et les marées sont plus fortes : on parle de vives-eaux. Lorsque ces astres forment un angle droit, les marées sont plus faibles, ce sont les mortes-eaux.",
+    "questions": [
+      {
+        "prompt": "Combien de fois par jour la mer monte-t-elle ?",
+        "options": [
+          "Une fois",
+          "Deux fois",
+          "Trois fois"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Quel astre explique surtout les marées ?",
+        "options": [
+          "La Lune",
+          "Mars",
+          "Vénus"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "prompt": "Comment appelle-t-on les marées les plus fortes ?",
+        "options": [
+          "Les mortes-eaux",
+          "Les vives-eaux",
+          "Les basses-eaux"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  }
+]
