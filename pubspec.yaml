@@ -1,5 +1,5 @@
 name: lecture_rapide
-description: "Véloce — entraînement à la lecture rapide (RSVP, guidage, écrémage, balayage, Schulte). Flutter + TDD."
+description: "Lira — entraînement à la lecture rapide (RSVP, guidage, écrémage, balayage, Schulte, typoglycémie). Flutter + TDD."
 publish_to: 'none'
 version: 0.1.0+1
 
