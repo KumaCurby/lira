@@ -27,9 +27,31 @@ List<PacerStep> buildPacerSchedule(
   if (wpm <= 0) {
     throw ArgumentError('wpm doit être > 0 (reçu $wpm)');
   }
-  final groups = chunk(words, chunkSize: chunkSize);
-  final perWordMs = 60000 / wpm;
+  return _scheduleFromGroups(chunk(words, chunkSize: chunkSize), wpm);
+}
 
+/// LR5 — Variante « empan progressif » : les blocs s'élargissent au fil du texte
+/// (de [minSpan] à [maxSpan] mots) tout en respectant [wpm]. Entraîne l'œil à
+/// saisir de plus en plus de mots par fixation.
+List<PacerStep> buildProgressivePacerSchedule(
+  List<String> words, {
+  required int wpm,
+  int minSpan = 1,
+  int maxSpan = 4,
+}) {
+  if (wpm <= 0) {
+    throw ArgumentError('wpm doit être > 0 (reçu $wpm)');
+  }
+  return _scheduleFromGroups(
+    progressiveChunk(words, minSpan: minSpan, maxSpan: maxSpan),
+    wpm,
+  );
+}
+
+/// Transforme des groupes de mots en étapes : durée ∝ nombre de mots (au rythme
+/// [wpm]), débuts cumulés.
+List<PacerStep> _scheduleFromGroups(List<List<String>> groups, int wpm) {
+  final perWordMs = 60000 / wpm;
   final steps = <PacerStep>[];
   var cursorMs = 0.0;
   for (final group in groups) {

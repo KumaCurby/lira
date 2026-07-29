@@ -258,6 +258,28 @@ class AppLocalizationsDe extends AppLocalizations {
   String get exWordsSubtitle => 'Wörter neu ordnen';
 
   @override
+  String get exKeywordsTitle => 'Schlüsselwort-Lesen';
+
+  @override
+  String get exKeywordsSubtitle => 'Über die kleinen Wörter gleiten';
+
+  @override
+  String get keywordsHint =>
+      'Die kleinen grammatischen Wörter sind gedimmt: lass deinen Blick darüber gleiten und auf den wichtigen Wörtern landen.';
+
+  @override
+  String get kwNormal => 'Normal';
+
+  @override
+  String get kwDim => 'Gedimmt';
+
+  @override
+  String get kwContent => 'Nur Inhalt';
+
+  @override
+  String get pacerProgressive => 'Progressive Spanne';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

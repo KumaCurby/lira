@@ -70,6 +70,12 @@ const List<ExerciseInfo> exerciseCatalog = [
     color: Color(0xFF7E57C2),
     needsText: true,
   ),
+  ExerciseInfo(
+    type: ExerciseType.keywords,
+    icon: Icons.filter_center_focus,
+    color: Color(0xFF00897B),
+    needsText: true,
+  ),
 ];
 
 String exerciseTitle(AppLocalizations l10n, ExerciseType type) =>
@@ -82,6 +88,7 @@ String exerciseTitle(AppLocalizations l10n, ExerciseType type) =>
       ExerciseType.schulte => l10n.exSchulteTitle,
       ExerciseType.scramble => l10n.exScrambleTitle,
       ExerciseType.wordScramble => l10n.exWordsTitle,
+      ExerciseType.keywords => l10n.exKeywordsTitle,
     };
 
 String exerciseSubtitle(AppLocalizations l10n, ExerciseType type) =>
@@ -94,4 +101,5 @@ String exerciseSubtitle(AppLocalizations l10n, ExerciseType type) =>
       ExerciseType.schulte => l10n.exSchulteSubtitle,
       ExerciseType.scramble => l10n.exScrambleSubtitle,
       ExerciseType.wordScramble => l10n.exWordsSubtitle,
+      ExerciseType.keywords => l10n.exKeywordsSubtitle,
     };

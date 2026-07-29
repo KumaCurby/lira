@@ -257,6 +257,28 @@ class AppLocalizationsEs extends AppLocalizations {
   String get exWordsSubtitle => 'Ordenar las palabras';
 
   @override
+  String get exKeywordsTitle => 'Lectura por palabras clave';
+
+  @override
+  String get exKeywordsSubtitle => 'Pasar sobre las palabras vacías';
+
+  @override
+  String get keywordsHint =>
+      'Las pequeñas palabras gramaticales están atenuadas: deja que la mirada resbale sobre ellas y se pose en las importantes.';
+
+  @override
+  String get kwNormal => 'Normal';
+
+  @override
+  String get kwDim => 'Atenuado';
+
+  @override
+  String get kwContent => 'Solo contenido';
+
+  @override
+  String get pacerProgressive => 'Amplitud progresiva';
+
+  @override
   String get wordsHint =>
       'Las palabras están desordenadas; la primera y la última no se mueven. Reconstruye el sentido.';
 

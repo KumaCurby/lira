@@ -10,6 +10,7 @@ enum ExerciseType {
   schulte,
   scramble,
   wordScramble,
+  keywords,
 }
 
 /// LR2 — Trace d'une session de lecture/exercice mesurée.

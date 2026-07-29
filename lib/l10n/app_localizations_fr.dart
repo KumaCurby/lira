@@ -259,6 +259,28 @@ class AppLocalizationsFr extends AppLocalizations {
   String get exWordsSubtitle => 'Remettre les mots dans l\'ordre';
 
   @override
+  String get exKeywordsTitle => 'Lecture mots-clés';
+
+  @override
+  String get exKeywordsSubtitle => 'Glisser sur les mots-outils';
+
+  @override
+  String get keywordsHint =>
+      'Les petits mots grammaticaux sont estompés : laisse ton regard glisser dessus et pose-le sur les mots importants.';
+
+  @override
+  String get kwNormal => 'Normal';
+
+  @override
+  String get kwDim => 'Estompé';
+
+  @override
+  String get kwContent => 'Contenu seul';
+
+  @override
+  String get pacerProgressive => 'Empan progressif';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

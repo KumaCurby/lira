@@ -11,3 +11,30 @@ List<List<String>> chunk(List<String> words, {required int chunkSize}) {
   }
   return chunks;
 }
+
+/// LR5 — Regroupe les mots avec un **empan croissant** : le premier bloc fait
+/// [minSpan] mot(s), chaque bloc suivant en compte un de plus, jusqu'au plafond
+/// [maxSpan] (ensuite constant). Base de l'exercice « empan progressif » qui
+/// entraîne l'œil à saisir de plus en plus de mots d'un coup.
+List<List<String>> progressiveChunk(
+  List<String> words, {
+  int minSpan = 1,
+  int maxSpan = 4,
+}) {
+  if (minSpan < 1) {
+    throw ArgumentError('minSpan doit être >= 1 (reçu $minSpan)');
+  }
+  if (maxSpan < minSpan) {
+    throw ArgumentError('maxSpan doit être >= minSpan ($maxSpan < $minSpan)');
+  }
+  final chunks = <List<String>>[];
+  var span = minSpan;
+  var i = 0;
+  while (i < words.length) {
+    final end = (i + span < words.length) ? i + span : words.length;
+    chunks.add(words.sublist(i, end));
+    i = end;
+    if (span < maxSpan) span++;
+  }
+  return chunks;
+}

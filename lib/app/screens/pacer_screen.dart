@@ -26,8 +26,10 @@ class _PacerScreenState extends ConsumerState<PacerScreen> {
   late final List<String> _words = _displayTokens(widget.text.body);
   late int _wpm;
   late int _chunkSize;
+  bool _progressive = false;
 
   List<PacerStep> _schedule = const [];
+  List<int> _offsets = const [];
   int _step = 0;
   bool _playing = false;
   Timer? _timer;
@@ -43,7 +45,16 @@ class _PacerScreenState extends ConsumerState<PacerScreen> {
   }
 
   void _rebuild() {
-    _schedule = buildPacerSchedule(_words, wpm: _wpm, chunkSize: _chunkSize);
+    _schedule = _progressive
+        ? buildProgressivePacerSchedule(_words, wpm: _wpm, maxSpan: _chunkSize)
+        : buildPacerSchedule(_words, wpm: _wpm, chunkSize: _chunkSize);
+    final offsets = <int>[];
+    var offset = 0;
+    for (final s in _schedule) {
+      offsets.add(offset);
+      offset += s.words.length;
+    }
+    _offsets = offsets;
   }
 
   void _play() {
@@ -123,7 +134,7 @@ class _PacerScreenState extends ConsumerState<PacerScreen> {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final activeStart = _step * _chunkSize;
+    final activeStart = _step < _offsets.length ? _offsets[_step] : -1;
     final activeEnd = (_step < _schedule.length)
         ? activeStart + _schedule[_step].words.length
         : -1;
@@ -177,6 +188,23 @@ class _PacerScreenState extends ConsumerState<PacerScreen> {
                 ),
                 const SizedBox(width: 68),
               ],
+            ),
+            const SizedBox(height: 8),
+            FilterChip(
+              selected: _progressive,
+              onSelected: (v) {
+                setState(() {
+                  _progressive = v;
+                  _step = 0;
+                  _rebuild();
+                });
+                if (_playing) {
+                  _timer?.cancel();
+                  _tick();
+                }
+              },
+              avatar: const Icon(Icons.unfold_more, size: 18),
+              label: Text(l10n.pacerProgressive),
             ),
             const SizedBox(height: 8),
             Text(l10n.speedLabel(_wpm)),

@@ -568,6 +568,48 @@ abstract class AppLocalizations {
   /// **'Remettre les mots dans l\'ordre'**
   String get exWordsSubtitle;
 
+  /// No description provided for @exKeywordsTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Lecture mots-clés'**
+  String get exKeywordsTitle;
+
+  /// No description provided for @exKeywordsSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Glisser sur les mots-outils'**
+  String get exKeywordsSubtitle;
+
+  /// No description provided for @keywordsHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Les petits mots grammaticaux sont estompés : laisse ton regard glisser dessus et pose-le sur les mots importants.'**
+  String get keywordsHint;
+
+  /// No description provided for @kwNormal.
+  ///
+  /// In fr, this message translates to:
+  /// **'Normal'**
+  String get kwNormal;
+
+  /// No description provided for @kwDim.
+  ///
+  /// In fr, this message translates to:
+  /// **'Estompé'**
+  String get kwDim;
+
+  /// No description provided for @kwContent.
+  ///
+  /// In fr, this message translates to:
+  /// **'Contenu seul'**
+  String get kwContent;
+
+  /// No description provided for @pacerProgressive.
+  ///
+  /// In fr, this message translates to:
+  /// **'Empan progressif'**
+  String get pacerProgressive;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

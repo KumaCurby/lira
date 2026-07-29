@@ -256,6 +256,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get exWordsSubtitle => 'Put the words back in order';
 
   @override
+  String get exKeywordsTitle => 'Keyword reading';
+
+  @override
+  String get exKeywordsSubtitle => 'Skim over the small words';
+
+  @override
+  String get keywordsHint =>
+      'The small grammar words are dimmed: let your eyes glide over them and land on the words that matter.';
+
+  @override
+  String get kwNormal => 'Normal';
+
+  @override
+  String get kwDim => 'Dimmed';
+
+  @override
+  String get kwContent => 'Content only';
+
+  @override
+  String get pacerProgressive => 'Progressive span';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

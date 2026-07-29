@@ -13,6 +13,7 @@ const Set<ExerciseType> _readingTypes = {
   ExerciseType.rsvp,
   ExerciseType.pacer,
   ExerciseType.skimming,
+  ExerciseType.keywords,
 };
 
 /// Onglet « Progrès » : statistiques, courbe de vitesse et badges.
