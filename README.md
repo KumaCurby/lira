@@ -6,6 +6,8 @@
 
 <p align="center"><em>Entraîneur de lecture rapide — Flutter, 100 % local, développé en TDD.</em></p>
 
+<p align="center"><a href="https://kumacurby.github.io/lira/"><strong>Essayer Lira dans le navigateur ↗</strong></a></p>
+
 ---
 
 **Lira** aide à **lire plus vite** grâce aux méthodes classiques d'entraînement, avec un
