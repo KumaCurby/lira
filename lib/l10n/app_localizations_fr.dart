@@ -281,6 +281,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get pacerProgressive => 'Empan progressif';
 
   @override
+  String get keywordsSpeedTitle => 'En lecture mots-clés';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

@@ -89,6 +89,7 @@
   "kwDim": "Dimmed",
   "kwContent": "Content only",
   "pacerProgressive": "Progressive span",
+  "keywordsSpeedTitle": "Keyword reading",
   "wordsHint": "The words are shuffled; the first and last stay put. Rebuild the meaning.",
   "scrambleBest": "Scrambled (best)",
   "scrambleSessionsStat": "Scrambled sessions",

@@ -24,6 +24,7 @@ void main() {
       final ref = referenceReadingWpm([
         _session(ExerciseType.speedTest, 300),
         _session(ExerciseType.scramble, 100), // ignorée
+        _session(ExerciseType.keywords, 500), // ignorée (aidée)
         _session(ExerciseType.schulte, 0), // ignorée (wpm 0)
       ], fallback: 250);
       expect(ref, 300);

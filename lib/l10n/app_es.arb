@@ -89,6 +89,7 @@
   "kwDim": "Atenuado",
   "kwContent": "Solo contenido",
   "pacerProgressive": "Amplitud progresiva",
+  "keywordsSpeedTitle": "En lectura por palabras clave",
   "wordsHint": "Las palabras están desordenadas; la primera y la última no se mueven. Reconstruye el sentido.",
   "scrambleBest": "Mezclado (récord)",
   "scrambleSessionsStat": "Sesiones mezcladas",

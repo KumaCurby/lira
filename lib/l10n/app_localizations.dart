@@ -610,6 +610,12 @@ abstract class AppLocalizations {
   /// **'Empan progressif'**
   String get pacerProgressive;
 
+  /// No description provided for @keywordsSpeedTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'En lecture mots-clés'**
+  String get keywordsSpeedTitle;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

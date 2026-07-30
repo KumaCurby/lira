@@ -4,7 +4,8 @@ import '../measure/reading_session.dart';
 /// obtenue en lecture mélangée (typoglycémie).
 ///
 /// C'est la moyenne des sessions de lecture chronométrée « classiques »
-/// (on écarte les sessions « mots mélangés » et celles sans vitesse mesurée,
+/// (on écarte les exercices aidés — « mots mélangés », « mots-clés » — et les
+/// sessions sans vitesse mesurée,
 /// comme les tables de Schulte). Si aucune donnée n'est disponible, on retombe
 /// sur [fallback] (typiquement la vitesse par défaut des réglages).
 int referenceReadingWpm(
@@ -16,6 +17,7 @@ int referenceReadingWpm(
         (s) =>
             s.type != ExerciseType.scramble &&
             s.type != ExerciseType.wordScramble &&
+            s.type != ExerciseType.keywords &&
             s.wpm > 0,
       )
       .toList();

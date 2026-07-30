@@ -5,9 +5,11 @@ import '../../domain/keywords/function_words.dart';
 import '../../domain/measure/comprehension_score.dart';
 import '../../domain/measure/reading_session.dart';
 import '../../domain/measure/wpm_calculator.dart';
+import '../../domain/scramble/scramble_stats.dart';
 import '../../domain/text/reading_text.dart';
 import '../../l10n/app_localizations.dart';
 import '../providers.dart';
+import '../theme.dart';
 import '../widgets/quiz_view.dart';
 import '../widgets/result_card.dart';
 
@@ -222,11 +224,45 @@ class _KeywordsScreenState extends ConsumerState<KeywordsScreen> {
 
   Widget _result() {
     final l10n = AppLocalizations.of(context)!;
+    final settings = ref.watch(settingsProvider);
+    final sessions = ref.watch(sessionsProvider).valueOrNull ?? const [];
+    final refWpm = referenceReadingWpm(sessions, fallback: settings.defaultWpm);
+    final percent = refWpm > 0 ? (_wpm / refWpm * 100).round() : null;
+
     return SingleChildScrollView(
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
           ResultCard(wpm: _wpm, comprehension: _comprehension),
+          if (percent != null) ...[
+            const SizedBox(height: 12),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: AppColors.primarySoft.withValues(alpha: 0.4),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.compare_arrows, color: AppColors.primary),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.keywordsSpeedTitle,
+                          style: const TextStyle(fontWeight: FontWeight.w800),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(l10n.scrambleSpeedCompare(percent, refWpm)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
           const SizedBox(height: 20),
           FilledButton.tonal(
             onPressed: () => Navigator.of(context).pop(),

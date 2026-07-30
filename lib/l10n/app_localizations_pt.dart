@@ -280,6 +280,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get pacerProgressive => 'Amplitude progressiva';
 
   @override
+  String get keywordsSpeedTitle => 'Em leitura por palavras-chave';
+
+  @override
   String get wordsHint =>
       'As palavras estão desordenadas; a primeira e a última ficam no lugar. Reconstrói o sentido.';
 

@@ -278,6 +278,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pacerProgressive => 'Progressive span';
 
   @override
+  String get keywordsSpeedTitle => 'Keyword reading';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

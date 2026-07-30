@@ -280,6 +280,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get pacerProgressive => 'Progressive Spanne';
 
   @override
+  String get keywordsSpeedTitle => 'Beim Schlüsselwort-Lesen';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 
