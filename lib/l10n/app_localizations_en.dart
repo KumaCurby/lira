@@ -460,6 +460,75 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get adaptiveSpeed => 'Adaptive speed';
+
+  @override
+  String get adaptiveSpeedSub => 'Bumps +10 wpm when comprehension stays high';
+
+  @override
+  String get quickSessionTitle => 'Today\'s session';
+
+  @override
+  String get quickSessionSubtitle => 'Pacer → RSVP → Speed test, 15 min';
+
+  @override
+  String get quickSessionHero => '15-minute session';
+
+  @override
+  String get quickSessionDone => 'Nice, session complete!';
+
+  @override
+  String get programTitle => '6-week program';
+
+  @override
+  String get programSubtitle => 'Structured daily plan';
+
+  @override
+  String get programIntro =>
+      'Six weeks to build, step by step, a fast reading that holds up on competition day. Pick today\'s text, follow the sequence.';
+
+  @override
+  String get challengesTitle => 'Challenges';
+
+  @override
+  String get challengesSubtitle => 'Streaks, records, consistency';
+
+  @override
+  String get challengeDone => 'Challenge complete!';
+
+  @override
+  String get challengeStreakTitle => 'Consistency';
+
+  @override
+  String get challengeStreakDesc =>
+      '5 consecutive days with at least one session.';
+
+  @override
+  String get challengeSpeedTitle => 'Speed and comprehension';
+
+  @override
+  String get challengeSpeedDesc => 'Hit 500 wpm with ≥ 80% comprehension.';
+
+  @override
+  String get challengeContestTitle => 'Competitor';
+
+  @override
+  String get challengeContestDesc =>
+      '3 Competition sessions with composite score ≥ 250.';
+
+  @override
+  String get challengeMemoryTitle => 'Sharp memory';
+
+  @override
+  String get challengeMemoryDesc => '20 active SRS cards in your deck.';
+
+  @override
+  String get challengeNotesTitle => 'Note-taker';
+
+  @override
+  String get challengeNotesDesc => 'Write 5 personal notes.';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

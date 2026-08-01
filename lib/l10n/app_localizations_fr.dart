@@ -464,6 +464,77 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get adaptiveSpeed => 'Vitesse adaptative';
+
+  @override
+  String get adaptiveSpeedSub =>
+      'Monte de +10 mpm quand la compréhension reste bonne';
+
+  @override
+  String get quickSessionTitle => 'Séance du jour';
+
+  @override
+  String get quickSessionSubtitle => 'Guidage → RSVP → Test, 15 min';
+
+  @override
+  String get quickSessionHero => 'Séance en 15 minutes';
+
+  @override
+  String get quickSessionDone => 'Bravo, séance terminée !';
+
+  @override
+  String get programTitle => 'Programme 6 semaines';
+
+  @override
+  String get programSubtitle => 'Plan quotidien structuré';
+
+  @override
+  String get programIntro =>
+      'Six semaines pour construire, palier par palier, une lecture rapide qui tient face au concours. Choisis ton texte du jour, respecte les enchainements.';
+
+  @override
+  String get challengesTitle => 'Défis';
+
+  @override
+  String get challengesSubtitle => 'Séries, records, régularité';
+
+  @override
+  String get challengeDone => 'Défi terminé !';
+
+  @override
+  String get challengeStreakTitle => 'Assiduité';
+
+  @override
+  String get challengeStreakDesc =>
+      '5 jours consécutifs avec au moins une session.';
+
+  @override
+  String get challengeSpeedTitle => 'Vitesse et compréhension';
+
+  @override
+  String get challengeSpeedDesc =>
+      'Atteindre 500 mpm avec ≥ 80 % de compréhension.';
+
+  @override
+  String get challengeContestTitle => 'Compétiteur';
+
+  @override
+  String get challengeContestDesc =>
+      '3 sessions Compétition avec score composite ≥ 250.';
+
+  @override
+  String get challengeMemoryTitle => 'Mémoire vive';
+
+  @override
+  String get challengeMemoryDesc => '20 cartes SRS actives dans ton deck.';
+
+  @override
+  String get challengeNotesTitle => 'Preneur de notes';
+
+  @override
+  String get challengeNotesDesc => 'Rédiger 5 notes personnelles.';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

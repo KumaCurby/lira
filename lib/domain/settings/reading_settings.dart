@@ -46,6 +46,7 @@ class ReadingSettings {
     this.scrambleStable = false,
     this.scrambleComfort = false,
     this.scrambleIntroSeen = false,
+    this.adaptiveSpeed = false,
   });
 
   /// Vitesse de lecture de départ (mots/min) — par défaut ≈ la **moyenne
@@ -85,6 +86,11 @@ class ReadingSettings {
   /// Vrai une fois l'explication de la typoglycémie affichée (une seule fois).
   final bool scrambleIntroSeen;
 
+  /// Si vrai, la vitesse par défaut monte/descend selon la compréhension aux
+  /// quiz (bon quiz → +10 mpm, mauvais quiz → −10 mpm), pour rester au niveau
+  /// juste au-dessus du confortable.
+  final bool adaptiveSpeed;
+
   ReadingSettings copyWith({
     int? defaultWpm,
     int? chunkSize,
@@ -103,6 +109,7 @@ class ReadingSettings {
     bool? scrambleStable,
     bool? scrambleComfort,
     bool? scrambleIntroSeen,
+    bool? adaptiveSpeed,
   }) {
     return ReadingSettings(
       defaultWpm: defaultWpm ?? this.defaultWpm,
@@ -121,6 +128,7 @@ class ReadingSettings {
       scrambleStable: scrambleStable ?? this.scrambleStable,
       scrambleComfort: scrambleComfort ?? this.scrambleComfort,
       scrambleIntroSeen: scrambleIntroSeen ?? this.scrambleIntroSeen,
+      adaptiveSpeed: adaptiveSpeed ?? this.adaptiveSpeed,
     );
   }
 }

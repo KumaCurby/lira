@@ -922,6 +922,138 @@ abstract class AppLocalizations {
   /// **'Trop rapide : seulement {percent} % de compréhension. Redescends d\'un cran.'**
   String speedCapFake(int percent);
 
+  /// No description provided for @adaptiveSpeed.
+  ///
+  /// In fr, this message translates to:
+  /// **'Vitesse adaptative'**
+  String get adaptiveSpeed;
+
+  /// No description provided for @adaptiveSpeedSub.
+  ///
+  /// In fr, this message translates to:
+  /// **'Monte de +10 mpm quand la compréhension reste bonne'**
+  String get adaptiveSpeedSub;
+
+  /// No description provided for @quickSessionTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Séance du jour'**
+  String get quickSessionTitle;
+
+  /// No description provided for @quickSessionSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Guidage → RSVP → Test, 15 min'**
+  String get quickSessionSubtitle;
+
+  /// No description provided for @quickSessionHero.
+  ///
+  /// In fr, this message translates to:
+  /// **'Séance en 15 minutes'**
+  String get quickSessionHero;
+
+  /// No description provided for @quickSessionDone.
+  ///
+  /// In fr, this message translates to:
+  /// **'Bravo, séance terminée !'**
+  String get quickSessionDone;
+
+  /// No description provided for @programTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Programme 6 semaines'**
+  String get programTitle;
+
+  /// No description provided for @programSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Plan quotidien structuré'**
+  String get programSubtitle;
+
+  /// No description provided for @programIntro.
+  ///
+  /// In fr, this message translates to:
+  /// **'Six semaines pour construire, palier par palier, une lecture rapide qui tient face au concours. Choisis ton texte du jour, respecte les enchainements.'**
+  String get programIntro;
+
+  /// No description provided for @challengesTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Défis'**
+  String get challengesTitle;
+
+  /// No description provided for @challengesSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Séries, records, régularité'**
+  String get challengesSubtitle;
+
+  /// No description provided for @challengeDone.
+  ///
+  /// In fr, this message translates to:
+  /// **'Défi terminé !'**
+  String get challengeDone;
+
+  /// No description provided for @challengeStreakTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Assiduité'**
+  String get challengeStreakTitle;
+
+  /// No description provided for @challengeStreakDesc.
+  ///
+  /// In fr, this message translates to:
+  /// **'5 jours consécutifs avec au moins une session.'**
+  String get challengeStreakDesc;
+
+  /// No description provided for @challengeSpeedTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Vitesse et compréhension'**
+  String get challengeSpeedTitle;
+
+  /// No description provided for @challengeSpeedDesc.
+  ///
+  /// In fr, this message translates to:
+  /// **'Atteindre 500 mpm avec ≥ 80 % de compréhension.'**
+  String get challengeSpeedDesc;
+
+  /// No description provided for @challengeContestTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Compétiteur'**
+  String get challengeContestTitle;
+
+  /// No description provided for @challengeContestDesc.
+  ///
+  /// In fr, this message translates to:
+  /// **'3 sessions Compétition avec score composite ≥ 250.'**
+  String get challengeContestDesc;
+
+  /// No description provided for @challengeMemoryTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mémoire vive'**
+  String get challengeMemoryTitle;
+
+  /// No description provided for @challengeMemoryDesc.
+  ///
+  /// In fr, this message translates to:
+  /// **'20 cartes SRS actives dans ton deck.'**
+  String get challengeMemoryDesc;
+
+  /// No description provided for @challengeNotesTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Preneur de notes'**
+  String get challengeNotesTitle;
+
+  /// No description provided for @challengeNotesDesc.
+  ///
+  /// In fr, this message translates to:
+  /// **'Rédiger 5 notes personnelles.'**
+  String get challengeNotesDesc;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

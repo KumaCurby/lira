@@ -463,6 +463,76 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String get adaptiveSpeed => 'Velocidad adaptativa';
+
+  @override
+  String get adaptiveSpeedSub =>
+      'Sube +10 ppm cuando la comprensión se mantiene';
+
+  @override
+  String get quickSessionTitle => 'Sesión del día';
+
+  @override
+  String get quickSessionSubtitle => 'Guía → RSVP → Prueba, 15 min';
+
+  @override
+  String get quickSessionHero => 'Sesión de 15 minutos';
+
+  @override
+  String get quickSessionDone => '¡Bien, sesión terminada!';
+
+  @override
+  String get programTitle => 'Programa de 6 semanas';
+
+  @override
+  String get programSubtitle => 'Plan diario estructurado';
+
+  @override
+  String get programIntro =>
+      'Seis semanas para construir, paso a paso, una lectura rápida que aguante en competición. Elige el texto del día, respeta la secuencia.';
+
+  @override
+  String get challengesTitle => 'Desafíos';
+
+  @override
+  String get challengesSubtitle => 'Rachas, récords, constancia';
+
+  @override
+  String get challengeDone => '¡Desafío completado!';
+
+  @override
+  String get challengeStreakTitle => 'Constancia';
+
+  @override
+  String get challengeStreakDesc => '5 días seguidos con al menos una sesión.';
+
+  @override
+  String get challengeSpeedTitle => 'Velocidad y comprensión';
+
+  @override
+  String get challengeSpeedDesc =>
+      'Alcanzar 500 ppm con ≥ 80 % de comprensión.';
+
+  @override
+  String get challengeContestTitle => 'Competidor';
+
+  @override
+  String get challengeContestDesc =>
+      '3 sesiones de Competición con puntuación compuesta ≥ 250.';
+
+  @override
+  String get challengeMemoryTitle => 'Memoria viva';
+
+  @override
+  String get challengeMemoryDesc => '20 tarjetas SRS activas en tu mazo.';
+
+  @override
+  String get challengeNotesTitle => 'Toma-notas';
+
+  @override
+  String get challengeNotesDesc => 'Escribir 5 notas personales.';
+
+  @override
   String get wordsHint =>
       'Las palabras están desordenadas; la primera y la última no se mueven. Reconstruye el sentido.';
 

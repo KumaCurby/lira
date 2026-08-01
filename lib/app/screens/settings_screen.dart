@@ -5,8 +5,11 @@ import '../../domain/settings/reading_settings.dart';
 import '../../l10n/app_localizations.dart';
 import '../providers.dart';
 import '../widgets/language_flag.dart';
+import 'challenges_screen.dart';
 import 'mnemonics_screen.dart';
 import 'notes_list_screen.dart';
+import 'program_screen.dart';
+import 'quick_session_screen.dart';
 
 /// Onglet « Réglages » : langue, préférences de lecture, rappel, données.
 class SettingsScreen extends ConsumerWidget {
@@ -260,6 +263,42 @@ class SettingsScreen extends ConsumerWidget {
             value: settings.scrambleComfort,
             onChanged: (v) =>
                 controller.update(settings.copyWith(scrambleComfort: v)),
+          ),
+          SwitchListTile(
+            title: Text(l10n.adaptiveSpeed),
+            subtitle: Text(l10n.adaptiveSpeedSub),
+            secondary: const Icon(Icons.auto_awesome),
+            value: settings.adaptiveSpeed,
+            onChanged: (v) =>
+                controller.update(settings.copyWith(adaptiveSpeed: v)),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.flash_on),
+            title: Text(l10n.quickSessionTitle),
+            subtitle: Text(l10n.quickSessionSubtitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const QuickSessionScreen()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.calendar_month),
+            title: Text(l10n.programTitle),
+            subtitle: Text(l10n.programSubtitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const ProgramScreen())),
+          ),
+          ListTile(
+            leading: const Icon(Icons.military_tech),
+            title: Text(l10n.challengesTitle),
+            subtitle: Text(l10n.challengesSubtitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const ChallengesScreen())),
           ),
           const Divider(),
           SwitchListTile(

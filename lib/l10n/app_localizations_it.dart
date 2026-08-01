@@ -464,6 +464,76 @@ class AppLocalizationsIt extends AppLocalizations {
   }
 
   @override
+  String get adaptiveSpeed => 'Velocità adattiva';
+
+  @override
+  String get adaptiveSpeedSub => 'Sale di +10 ppm quando la comprensione tiene';
+
+  @override
+  String get quickSessionTitle => 'Sessione del giorno';
+
+  @override
+  String get quickSessionSubtitle => 'Guida → RSVP → Test, 15 min';
+
+  @override
+  String get quickSessionHero => 'Sessione di 15 minuti';
+
+  @override
+  String get quickSessionDone => 'Bravo, sessione completata!';
+
+  @override
+  String get programTitle => 'Programma 6 settimane';
+
+  @override
+  String get programSubtitle => 'Piano quotidiano strutturato';
+
+  @override
+  String get programIntro =>
+      'Sei settimane per costruire, passo dopo passo, una lettura veloce che regge in gara. Scegli il testo del giorno, rispetta la sequenza.';
+
+  @override
+  String get challengesTitle => 'Sfide';
+
+  @override
+  String get challengesSubtitle => 'Serie, record, costanza';
+
+  @override
+  String get challengeDone => 'Sfida completata!';
+
+  @override
+  String get challengeStreakTitle => 'Costanza';
+
+  @override
+  String get challengeStreakDesc =>
+      '5 giorni consecutivi con almeno una sessione.';
+
+  @override
+  String get challengeSpeedTitle => 'Velocità e comprensione';
+
+  @override
+  String get challengeSpeedDesc =>
+      'Raggiungere 500 ppm con ≥ 80 % di comprensione.';
+
+  @override
+  String get challengeContestTitle => 'Sfidante';
+
+  @override
+  String get challengeContestDesc =>
+      '3 sessioni Competizione con punteggio composito ≥ 250.';
+
+  @override
+  String get challengeMemoryTitle => 'Memoria viva';
+
+  @override
+  String get challengeMemoryDesc => '20 carte SRS attive nel tuo mazzo.';
+
+  @override
+  String get challengeNotesTitle => 'Prende-appunti';
+
+  @override
+  String get challengeNotesDesc => 'Scrivere 5 appunti personali.';
+
+  @override
   String get wordsHint =>
       'Le parole sono in disordine; la prima e l\'ultima restano al loro posto. Ricostruisci il senso.';
 

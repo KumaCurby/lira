@@ -105,10 +105,31 @@ final readingProgressProvider = FutureProvider<Map<String, ReadingProgress>>(
 );
 
 /// Enregistre une session puis rafraîchit les vues de progression.
+///
+/// Si le mode **vitesse adaptative** est actif et qu'une compréhension a été
+/// mesurée, on ajuste `defaultWpm` : ≥ 80 % → +10 mpm, < 60 % → −10 mpm ; sinon
+/// on ne bouge pas. Clampé à [100, 800].
 Future<void> recordSession(WidgetRef ref, ReadingSession session) async {
   await ref.read(sessionRepositoryProvider).add(session);
   ref.invalidate(sessionsProvider);
   ref.invalidate(progressProvider);
+
+  final settings = ref.read(settingsProvider);
+  if (settings.adaptiveSpeed && session.comprehension != null) {
+    final c = session.comprehension!;
+    var next = settings.defaultWpm;
+    if (c >= 0.8) {
+      next += 10;
+    } else if (c < 0.6) {
+      next -= 10;
+    }
+    next = next.clamp(100, 800);
+    if (next != settings.defaultWpm) {
+      await ref
+          .read(settingsProvider.notifier)
+          .update(settings.copyWith(defaultWpm: next));
+    }
+  }
 }
 
 /// Toutes les cartes SRS connues.

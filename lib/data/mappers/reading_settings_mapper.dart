@@ -17,6 +17,7 @@ Map<String, dynamic> settingsToJson(ReadingSettings settings) => {
   'scrambleStable': settings.scrambleStable,
   'scrambleComfort': settings.scrambleComfort,
   'scrambleIntroSeen': settings.scrambleIntroSeen,
+  'adaptiveSpeed': settings.adaptiveSpeed,
 };
 
 ReadingSettings settingsFromJson(Map<String, dynamic> json) => ReadingSettings(
@@ -42,4 +43,5 @@ ReadingSettings settingsFromJson(Map<String, dynamic> json) => ReadingSettings(
   scrambleStable: json['scrambleStable'] as bool? ?? false,
   scrambleComfort: json['scrambleComfort'] as bool? ?? false,
   scrambleIntroSeen: json['scrambleIntroSeen'] as bool? ?? false,
+  adaptiveSpeed: json['adaptiveSpeed'] as bool? ?? false,
 );

@@ -462,6 +462,76 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
+  String get adaptiveSpeed => 'Adaptive Geschwindigkeit';
+
+  @override
+  String get adaptiveSpeedSub =>
+      'Steigert +10 WpM, wenn das Verständnis hoch bleibt';
+
+  @override
+  String get quickSessionTitle => 'Session des Tages';
+
+  @override
+  String get quickSessionSubtitle => 'Pacer → RSVP → Test, 15 Min';
+
+  @override
+  String get quickSessionHero => '15-Minuten-Session';
+
+  @override
+  String get quickSessionDone => 'Super, Session abgeschlossen!';
+
+  @override
+  String get programTitle => '6-Wochen-Programm';
+
+  @override
+  String get programSubtitle => 'Strukturierter Tagesplan';
+
+  @override
+  String get programIntro =>
+      'Sechs Wochen, um Schritt für Schritt schnelles Lesen aufzubauen, das im Wettkampf hält. Wähle den Text des Tages, halte die Reihenfolge ein.';
+
+  @override
+  String get challengesTitle => 'Herausforderungen';
+
+  @override
+  String get challengesSubtitle => 'Serien, Rekorde, Regelmäßigkeit';
+
+  @override
+  String get challengeDone => 'Herausforderung geschafft!';
+
+  @override
+  String get challengeStreakTitle => 'Regelmäßigkeit';
+
+  @override
+  String get challengeStreakDesc =>
+      '5 Tage in Folge mit mindestens einer Einheit.';
+
+  @override
+  String get challengeSpeedTitle => 'Tempo und Verständnis';
+
+  @override
+  String get challengeSpeedDesc => '500 WpM erreichen mit ≥ 80 % Verständnis.';
+
+  @override
+  String get challengeContestTitle => 'Wettkämpfer';
+
+  @override
+  String get challengeContestDesc =>
+      '3 Wettkampf-Einheiten mit Kombiscore ≥ 250.';
+
+  @override
+  String get challengeMemoryTitle => 'Wacher Geist';
+
+  @override
+  String get challengeMemoryDesc => '20 aktive SRS-Karten im Deck.';
+
+  @override
+  String get challengeNotesTitle => 'Notizmacher';
+
+  @override
+  String get challengeNotesDesc => '5 persönliche Notizen schreiben.';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

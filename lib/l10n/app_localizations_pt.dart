@@ -463,6 +463,75 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get adaptiveSpeed => 'Velocidade adaptativa';
+
+  @override
+  String get adaptiveSpeedSub => 'Sobe +10 ppm quando a compreensão se mantém';
+
+  @override
+  String get quickSessionTitle => 'Sessão do dia';
+
+  @override
+  String get quickSessionSubtitle => 'Guia → RSVP → Teste, 15 min';
+
+  @override
+  String get quickSessionHero => 'Sessão de 15 minutos';
+
+  @override
+  String get quickSessionDone => 'Boa, sessão terminada!';
+
+  @override
+  String get programTitle => 'Programa de 6 semanas';
+
+  @override
+  String get programSubtitle => 'Plano diário estruturado';
+
+  @override
+  String get programIntro =>
+      'Seis semanas para construir, passo a passo, uma leitura rápida que aguenta em competição. Escolhe o texto do dia, respeita a sequência.';
+
+  @override
+  String get challengesTitle => 'Desafios';
+
+  @override
+  String get challengesSubtitle => 'Séries, recordes, constância';
+
+  @override
+  String get challengeDone => 'Desafio completo!';
+
+  @override
+  String get challengeStreakTitle => 'Constância';
+
+  @override
+  String get challengeStreakDesc =>
+      '5 dias seguidos com pelo menos uma sessão.';
+
+  @override
+  String get challengeSpeedTitle => 'Velocidade e compreensão';
+
+  @override
+  String get challengeSpeedDesc => 'Atingir 500 ppm com ≥ 80 % de compreensão.';
+
+  @override
+  String get challengeContestTitle => 'Competidor';
+
+  @override
+  String get challengeContestDesc =>
+      '3 sessões de Competição com pontuação composta ≥ 250.';
+
+  @override
+  String get challengeMemoryTitle => 'Memória viva';
+
+  @override
+  String get challengeMemoryDesc => '20 cartões SRS ativos no baralho.';
+
+  @override
+  String get challengeNotesTitle => 'Toma-notas';
+
+  @override
+  String get challengeNotesDesc => 'Escrever 5 notas pessoais.';
+
+  @override
   String get wordsHint =>
       'As palavras estão desordenadas; a primeira e a última ficam no lugar. Reconstrói o sentido.';
 

@@ -9,9 +9,18 @@ import '../providers.dart';
 
 /// Choix d'un texte avant de lancer un exercice qui en a besoin.
 class TextPickerScreen extends ConsumerWidget {
-  const TextPickerScreen({super.key, required this.info});
+  const TextPickerScreen({
+    super.key,
+    required this.info,
+    this.returnText = false,
+  });
 
   final ExerciseInfo info;
+
+  /// Si vrai, le tap sur un texte referme l'écran en le renvoyant à l'appelant
+  /// (pattern utilisé par la séance combinée). Sinon, on push directement
+  /// l'exercice.
+  final bool returnText;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -61,11 +70,17 @@ class TextPickerScreen extends ConsumerWidget {
                     ),
                   ),
                   trailing: const Icon(Icons.chevron_right),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => exerciseScreenFor(info.type, text),
-                    ),
-                  ),
+                  onTap: () {
+                    if (returnText) {
+                      Navigator.of(context).pop(text);
+                    } else {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => exerciseScreenFor(info.type, text),
+                        ),
+                      );
+                    }
+                  },
                 ),
               );
             },
