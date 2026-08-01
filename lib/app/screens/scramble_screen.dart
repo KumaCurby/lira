@@ -227,6 +227,12 @@ class _ScrambleScreenState extends ConsumerState<ScrambleScreen> {
 
   void _submitQuiz() {
     _comprehension = scoreQuiz(widget.text.questions, _answers).ratio;
+    recordQuizToSrs(
+      ref,
+      textId: widget.text.id,
+      questions: widget.text.questions,
+      answers: _answers,
+    );
     setState(() => _phase = _Phase.result);
     _save();
   }

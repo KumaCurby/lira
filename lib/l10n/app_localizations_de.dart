@@ -283,6 +283,54 @@ class AppLocalizationsDe extends AppLocalizations {
   String get keywordsSpeedTitle => 'Beim Schlüsselwort-Lesen';
 
   @override
+  String get reviewTitle => 'Wiederholung';
+
+  @override
+  String get reviewEmpty => 'Heute keine Wiederholung. Komm später wieder!';
+
+  @override
+  String reviewDone(int count) {
+    return 'Super — $count Karte(n) wiederholt!';
+  }
+
+  @override
+  String reviewProgress(int current, int total) {
+    return 'Karte $current von $total';
+  }
+
+  @override
+  String get reviewMissing => 'Frage nicht gefunden (Text gelöscht?)';
+
+  @override
+  String get reviewShowAnswer => 'Antwort zeigen';
+
+  @override
+  String get srsAgain => 'Nochmal';
+
+  @override
+  String get srsHard => 'Schwer';
+
+  @override
+  String get srsGood => 'Gut';
+
+  @override
+  String get srsEasy => 'Leicht';
+
+  @override
+  String homeReviewDue(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Karten zu wiederholen',
+      one: '1 Karte zu wiederholen',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeReviewCta => 'Jetzt wiederholen';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

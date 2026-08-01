@@ -283,6 +283,54 @@ class AppLocalizationsIt extends AppLocalizations {
   String get keywordsSpeedTitle => 'In lettura per parole chiave';
 
   @override
+  String get reviewTitle => 'Ripassi';
+
+  @override
+  String get reviewEmpty => 'Nessun ripasso per oggi. Torna più tardi!';
+
+  @override
+  String reviewDone(int count) {
+    return 'Ben fatto: $count carta/e ripassate!';
+  }
+
+  @override
+  String reviewProgress(int current, int total) {
+    return 'Carta $current di $total';
+  }
+
+  @override
+  String get reviewMissing => 'Domanda non trovata (testo eliminato?)';
+
+  @override
+  String get reviewShowAnswer => 'Mostra la risposta';
+
+  @override
+  String get srsAgain => 'Da rivedere';
+
+  @override
+  String get srsHard => 'Difficile';
+
+  @override
+  String get srsGood => 'Bene';
+
+  @override
+  String get srsEasy => 'Facile';
+
+  @override
+  String homeReviewDue(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count carte da ripassare',
+      one: '1 carta da ripassare',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeReviewCta => 'Ripassa ora';
+
+  @override
   String get wordsHint =>
       'Le parole sono in disordine; la prima e l\'ultima restano al loro posto. Ricostruisci il senso.';
 

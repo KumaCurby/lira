@@ -11,13 +11,18 @@ import '../data/import/pdf_text_reader_syncfusion.dart';
 import '../data/prefs/shared_prefs_progress_repository.dart';
 import '../data/prefs/shared_prefs_session_repository.dart';
 import '../data/prefs/shared_prefs_settings_repository.dart';
+import '../data/prefs/shared_prefs_srs_repository.dart';
+import '../domain/measure/comprehension_score.dart';
 import '../domain/measure/reading_session.dart';
 import '../domain/progress/progress_tracker.dart';
 import '../domain/progress/reading_progress.dart';
 import '../domain/repositories/progress_repository.dart';
 import '../domain/repositories/session_repository.dart';
 import '../domain/repositories/settings_repository.dart';
+import '../domain/repositories/srs_repository.dart';
 import '../domain/repositories/text_repository.dart';
+import '../domain/srs/srs_card.dart';
+import '../domain/srs/srs_scheduler.dart';
 import '../domain/settings/reading_settings.dart';
 import '../domain/text/reading_text.dart';
 import 'reminder/reminder_service.dart';
@@ -47,6 +52,9 @@ final settingsRepositoryProvider = Provider<SettingsRepository>(
 );
 final progressRepositoryProvider = Provider<ProgressRepository>(
   (ref) => SharedPrefsProgressRepository(ref.watch(sharedPreferencesProvider)),
+);
+final srsRepositoryProvider = Provider<SrsRepository>(
+  (ref) => SharedPrefsSrsRepository(ref.watch(sharedPreferencesProvider)),
 );
 
 /// Rappel quotidien (implémentation native ou no-op web ; init/sync dans main).
@@ -95,6 +103,45 @@ Future<void> recordSession(WidgetRef ref, ReadingSession session) async {
   await ref.read(sessionRepositoryProvider).add(session);
   ref.invalidate(sessionsProvider);
   ref.invalidate(progressProvider);
+}
+
+/// Toutes les cartes SRS connues.
+final srsCardsProvider = FutureProvider<List<SrsCard>>(
+  (ref) => ref.watch(srsRepositoryProvider).all(),
+);
+
+/// Cartes SRS dues à `now` (triées par urgence).
+final dueSrsCardsProvider = FutureProvider<List<SrsCard>>((ref) async {
+  final all = await ref.watch(srsCardsProvider.future);
+  return dueCards(all, now: ref.read(clockProvider).now());
+});
+
+/// Enregistre les réponses d'un quiz comme cartes SRS (une par question) :
+/// bonne réponse => `good`, mauvaise ou omise => `again`. Une carte inconnue
+/// est créée à partir de zéro. Les cartes existantes sont mises à jour.
+Future<void> recordQuizToSrs(
+  WidgetRef ref, {
+  required String textId,
+  required List<Question> questions,
+  required List<int?> answers,
+}) async {
+  final repo = ref.read(srsRepositoryProvider);
+  final now = ref.read(clockProvider).now();
+  final existing = {
+    for (final c in await repo.all()) '${c.textId}|${c.cardKey}': c,
+  };
+  for (var i = 0; i < questions.length; i++) {
+    final key = 'q:$i';
+    final card =
+        existing['$textId|$key'] ??
+        SrsCard.fresh(textId: textId, cardKey: key, now: now);
+    final answer = answers[i] == questions[i].correctIndex
+        ? SrsAnswer.good
+        : SrsAnswer.again;
+    await repo.upsert(scheduleNext(card, answer, now: now));
+  }
+  ref.invalidate(srsCardsProvider);
+  ref.invalidate(dueSrsCardsProvider);
 }
 
 // --- Import de documents (EPUB/PDF) ---

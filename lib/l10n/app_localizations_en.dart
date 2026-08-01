@@ -281,6 +281,54 @@ class AppLocalizationsEn extends AppLocalizations {
   String get keywordsSpeedTitle => 'Keyword reading';
 
   @override
+  String get reviewTitle => 'Reviews';
+
+  @override
+  String get reviewEmpty => 'No reviews due today. Come back later!';
+
+  @override
+  String reviewDone(int count) {
+    return 'Well done — $count card(s) reviewed!';
+  }
+
+  @override
+  String reviewProgress(int current, int total) {
+    return 'Card $current of $total';
+  }
+
+  @override
+  String get reviewMissing => 'Question not found (text deleted?)';
+
+  @override
+  String get reviewShowAnswer => 'Show answer';
+
+  @override
+  String get srsAgain => 'Again';
+
+  @override
+  String get srsHard => 'Hard';
+
+  @override
+  String get srsGood => 'Good';
+
+  @override
+  String get srsEasy => 'Easy';
+
+  @override
+  String homeReviewDue(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count cards to review',
+      one: '1 card to review',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeReviewCta => 'Review now';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

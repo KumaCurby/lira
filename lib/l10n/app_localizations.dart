@@ -616,6 +616,78 @@ abstract class AppLocalizations {
   /// **'En lecture mots-clés'**
   String get keywordsSpeedTitle;
 
+  /// No description provided for @reviewTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Révisions'**
+  String get reviewTitle;
+
+  /// No description provided for @reviewEmpty.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucune révision aujourd\'hui. Reviens plus tard !'**
+  String get reviewEmpty;
+
+  /// No description provided for @reviewDone.
+  ///
+  /// In fr, this message translates to:
+  /// **'Bien joué : {count} carte(s) révisée(s) !'**
+  String reviewDone(int count);
+
+  /// No description provided for @reviewProgress.
+  ///
+  /// In fr, this message translates to:
+  /// **'Carte {current} sur {total}'**
+  String reviewProgress(int current, int total);
+
+  /// No description provided for @reviewMissing.
+  ///
+  /// In fr, this message translates to:
+  /// **'Question introuvable (texte supprimé ?)'**
+  String get reviewMissing;
+
+  /// No description provided for @reviewShowAnswer.
+  ///
+  /// In fr, this message translates to:
+  /// **'Voir la réponse'**
+  String get reviewShowAnswer;
+
+  /// No description provided for @srsAgain.
+  ///
+  /// In fr, this message translates to:
+  /// **'À revoir'**
+  String get srsAgain;
+
+  /// No description provided for @srsHard.
+  ///
+  /// In fr, this message translates to:
+  /// **'Difficile'**
+  String get srsHard;
+
+  /// No description provided for @srsGood.
+  ///
+  /// In fr, this message translates to:
+  /// **'Bien'**
+  String get srsGood;
+
+  /// No description provided for @srsEasy.
+  ///
+  /// In fr, this message translates to:
+  /// **'Facile'**
+  String get srsEasy;
+
+  /// No description provided for @homeReviewDue.
+  ///
+  /// In fr, this message translates to:
+  /// **'{count, plural, =1{1 carte à réviser} other{{count} cartes à réviser}}'**
+  String homeReviewDue(int count);
+
+  /// No description provided for @homeReviewCta.
+  ///
+  /// In fr, this message translates to:
+  /// **'Réviser maintenant'**
+  String get homeReviewCta;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

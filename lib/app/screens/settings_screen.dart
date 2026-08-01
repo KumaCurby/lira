@@ -303,8 +303,11 @@ class SettingsScreen extends ConsumerWidget {
             subtitle: Text(l10n.clearHistorySubtitle),
             onTap: () async {
               await ref.read(sessionRepositoryProvider).clear();
+              await ref.read(srsRepositoryProvider).clear();
               ref.invalidate(sessionsProvider);
               ref.invalidate(progressProvider);
+              ref.invalidate(srsCardsProvider);
+              ref.invalidate(dueSrsCardsProvider);
               if (context.mounted) {
                 ScaffoldMessenger.of(
                   context,

@@ -284,6 +284,54 @@ class AppLocalizationsFr extends AppLocalizations {
   String get keywordsSpeedTitle => 'En lecture mots-clés';
 
   @override
+  String get reviewTitle => 'Révisions';
+
+  @override
+  String get reviewEmpty => 'Aucune révision aujourd\'hui. Reviens plus tard !';
+
+  @override
+  String reviewDone(int count) {
+    return 'Bien joué : $count carte(s) révisée(s) !';
+  }
+
+  @override
+  String reviewProgress(int current, int total) {
+    return 'Carte $current sur $total';
+  }
+
+  @override
+  String get reviewMissing => 'Question introuvable (texte supprimé ?)';
+
+  @override
+  String get reviewShowAnswer => 'Voir la réponse';
+
+  @override
+  String get srsAgain => 'À revoir';
+
+  @override
+  String get srsHard => 'Difficile';
+
+  @override
+  String get srsGood => 'Bien';
+
+  @override
+  String get srsEasy => 'Facile';
+
+  @override
+  String homeReviewDue(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count cartes à réviser',
+      one: '1 carte à réviser',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeReviewCta => 'Réviser maintenant';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

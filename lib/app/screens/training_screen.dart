@@ -10,6 +10,7 @@ import '../exercise_catalog.dart';
 import '../navigation.dart';
 import '../providers.dart';
 import '../theme.dart';
+import 'review_screen.dart';
 import 'text_picker_screen.dart';
 
 /// Onglet « Entraînement » : en-tête + hero + objectif + reprise + exercices.
@@ -66,6 +67,8 @@ class TrainingScreen extends ConsumerWidget {
                 const _HeroBanner(),
                 const SizedBox(height: 14),
                 _DailyGoalCard(doneToday: doneToday),
+                const SizedBox(height: 10),
+                const _ReviewCard(),
                 const SizedBox(height: 20),
                 if (resumables.isNotEmpty)
                   _ContinueSection(
@@ -241,6 +244,62 @@ class _DailyGoalCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Carte « Révisions dues » : n'apparaît que si le SRS a des cartes à réviser.
+class _ReviewCard extends ConsumerWidget {
+  const _ReviewCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+    final due = ref.watch(dueSrsCardsProvider).valueOrNull ?? const [];
+    if (due.isEmpty) return const SizedBox.shrink();
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
+      onTap: () => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (_) => const ReviewScreen())),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: AppColors.primarySoft.withValues(alpha: 0.55),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                color: AppColors.primary,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(Icons.style, color: Colors.white, size: 20),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    l10n.homeReviewDue(due.length),
+                    style: const TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                  Text(
+                    l10n.homeReviewCta,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.arrow_forward_ios, size: 16),
+          ],
+        ),
       ),
     );
   }

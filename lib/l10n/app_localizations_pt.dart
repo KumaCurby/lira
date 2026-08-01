@@ -283,6 +283,54 @@ class AppLocalizationsPt extends AppLocalizations {
   String get keywordsSpeedTitle => 'Em leitura por palavras-chave';
 
   @override
+  String get reviewTitle => 'Revisões';
+
+  @override
+  String get reviewEmpty => 'Nenhuma revisão hoje. Volta mais tarde!';
+
+  @override
+  String reviewDone(int count) {
+    return 'Muito bem: $count cartão(ões) revisto(s)!';
+  }
+
+  @override
+  String reviewProgress(int current, int total) {
+    return 'Cartão $current de $total';
+  }
+
+  @override
+  String get reviewMissing => 'Pergunta não encontrada (texto apagado?)';
+
+  @override
+  String get reviewShowAnswer => 'Ver a resposta';
+
+  @override
+  String get srsAgain => 'Rever';
+
+  @override
+  String get srsHard => 'Difícil';
+
+  @override
+  String get srsGood => 'Bem';
+
+  @override
+  String get srsEasy => 'Fácil';
+
+  @override
+  String homeReviewDue(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count cartões para rever',
+      one: '1 cartão para rever',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get homeReviewCta => 'Rever agora';
+
+  @override
   String get wordsHint =>
       'As palavras estão desordenadas; a primeira e a última ficam no lugar. Reconstrói o sentido.';
 
