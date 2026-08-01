@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../domain/measure/reading_session.dart';
 import '../domain/text/reading_text.dart';
+import 'screens/columns_screen.dart';
 import 'screens/keywords_screen.dart';
+import 'screens/no_subvocal_screen.dart';
 import 'screens/pacer_screen.dart';
 import 'screens/rsvp_screen.dart';
 import 'screens/scanning_screen.dart';
@@ -32,5 +34,9 @@ Widget exerciseScreenFor(ExerciseType type, ReadingText? text) {
       return ScrambleScreen(text: text!, mode: ScrambleMode.words);
     case ExerciseType.keywords:
       return KeywordsScreen(text: text!);
+    case ExerciseType.columns:
+      return ColumnsScreen(text: text!);
+    case ExerciseType.noSubvocal:
+      return NoSubvocalScreen(text: text!);
   }
 }

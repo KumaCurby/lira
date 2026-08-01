@@ -332,6 +332,36 @@ class AppLocalizationsFr extends AppLocalizations {
   String get homeReviewCta => 'Réviser maintenant';
 
   @override
+  String get exColumnsTitle => 'Lecture en colonnes';
+
+  @override
+  String get exColumnsSubtitle => 'Moins de fixations par ligne';
+
+  @override
+  String get columnsHint =>
+      'Le texte est en colonnes fines : force ton regard à sauter plus souvent, tu couvriras plus de mots à chaque fixation.';
+
+  @override
+  String columnsCount(int count) {
+    return '$count colonnes';
+  }
+
+  @override
+  String get exNoSubvocalTitle => 'Sans voix intérieure';
+
+  @override
+  String get exNoSubvocalSubtitle => 'Compter mentalement en lisant';
+
+  @override
+  String get noSubvocalHint =>
+      'Suis des yeux les chiffres 1‑2‑3‑4 pendant que tu lis : ta voix intérieure est occupée, tu reconnais les mots par leur forme.';
+
+  @override
+  String noSubvocalTempo(int count) {
+    return 'Tempo : $count bpm';
+  }
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

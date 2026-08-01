@@ -688,6 +688,54 @@ abstract class AppLocalizations {
   /// **'Réviser maintenant'**
   String get homeReviewCta;
 
+  /// No description provided for @exColumnsTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Lecture en colonnes'**
+  String get exColumnsTitle;
+
+  /// No description provided for @exColumnsSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Moins de fixations par ligne'**
+  String get exColumnsSubtitle;
+
+  /// No description provided for @columnsHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Le texte est en colonnes fines : force ton regard à sauter plus souvent, tu couvriras plus de mots à chaque fixation.'**
+  String get columnsHint;
+
+  /// No description provided for @columnsCount.
+  ///
+  /// In fr, this message translates to:
+  /// **'{count} colonnes'**
+  String columnsCount(int count);
+
+  /// No description provided for @exNoSubvocalTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Sans voix intérieure'**
+  String get exNoSubvocalTitle;
+
+  /// No description provided for @exNoSubvocalSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Compter mentalement en lisant'**
+  String get exNoSubvocalSubtitle;
+
+  /// No description provided for @noSubvocalHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Suis des yeux les chiffres 1‑2‑3‑4 pendant que tu lis : ta voix intérieure est occupée, tu reconnais les mots par leur forme.'**
+  String get noSubvocalHint;
+
+  /// No description provided for @noSubvocalTempo.
+  ///
+  /// In fr, this message translates to:
+  /// **'Tempo : {count} bpm'**
+  String noSubvocalTempo(int count);
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

@@ -331,6 +331,36 @@ class AppLocalizationsDe extends AppLocalizations {
   String get homeReviewCta => 'Jetzt wiederholen';
 
   @override
+  String get exColumnsTitle => 'Spalten-Lesen';
+
+  @override
+  String get exColumnsSubtitle => 'Weniger Fixationen pro Zeile';
+
+  @override
+  String get columnsHint =>
+      'Der Text steht in schmalen Spalten: zwing deine Augen häufiger zu springen — pro Fixation erfasst du mehr Wörter.';
+
+  @override
+  String columnsCount(int count) {
+    return '$count Spalten';
+  }
+
+  @override
+  String get exNoSubvocalTitle => 'Innere Stimme stumm';
+
+  @override
+  String get exNoSubvocalSubtitle => 'Beim Lesen mitzählen';
+
+  @override
+  String get noSubvocalHint =>
+      'Folge mit den Augen dem Takt 1‑2‑3‑4 während du liest: die innere Stimme ist belegt, du erkennst Wörter an ihrer Form.';
+
+  @override
+  String noSubvocalTempo(int count) {
+    return 'Tempo: $count bpm';
+  }
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

@@ -329,6 +329,36 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeReviewCta => 'Review now';
 
   @override
+  String get exColumnsTitle => 'Column reading';
+
+  @override
+  String get exColumnsSubtitle => 'Fewer fixations per line';
+
+  @override
+  String get columnsHint =>
+      'Text is laid out in narrow columns: force your eyes to hop more often — you\'ll take in more words per fixation.';
+
+  @override
+  String columnsCount(int count) {
+    return '$count columns';
+  }
+
+  @override
+  String get exNoSubvocalTitle => 'Silence the inner voice';
+
+  @override
+  String get exNoSubvocalSubtitle => 'Count mentally while reading';
+
+  @override
+  String get noSubvocalHint =>
+      'Follow the 1‑2‑3‑4 beat with your eyes while reading: your inner voice is busy, forcing you to recognise words by shape.';
+
+  @override
+  String noSubvocalTempo(int count) {
+    return 'Tempo: $count bpm';
+  }
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 
