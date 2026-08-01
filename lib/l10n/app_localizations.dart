@@ -838,6 +838,90 @@ abstract class AppLocalizations {
   /// **'Palais de mémoire, chunking, imagerie…'**
   String get mnemonicsSubtitle;
 
+  /// No description provided for @exCompetitionTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Compétition'**
+  String get exCompetitionTitle;
+
+  /// No description provided for @exCompetitionSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Score composite = mpm × compréhension'**
+  String get exCompetitionSubtitle;
+
+  /// No description provided for @competitionReadHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Lis vite ET bien : le score final combine les deux.'**
+  String get competitionReadHint;
+
+  /// No description provided for @competitionDone.
+  ///
+  /// In fr, this message translates to:
+  /// **'J\'ai fini'**
+  String get competitionDone;
+
+  /// No description provided for @competitionScoreLabel.
+  ///
+  /// In fr, this message translates to:
+  /// **'SCORE'**
+  String get competitionScoreLabel;
+
+  /// No description provided for @competitionScoreCaption.
+  ///
+  /// In fr, this message translates to:
+  /// **'mots efficaces / min'**
+  String get competitionScoreCaption;
+
+  /// No description provided for @exSpeedCapTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Vitesse plafond'**
+  String get exSpeedCapTitle;
+
+  /// No description provided for @exSpeedCapSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Trouve ta mpm maximale utile'**
+  String get exSpeedCapSubtitle;
+
+  /// No description provided for @speedCapHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'La vitesse augmente toutes les 10 s. Tape STOP dès que tu perds le fil ; le quiz validera si ton plafond est réel.'**
+  String get speedCapHint;
+
+  /// No description provided for @speedCapStop.
+  ///
+  /// In fr, this message translates to:
+  /// **'STOP je perds'**
+  String get speedCapStop;
+
+  /// No description provided for @speedCapValidated.
+  ///
+  /// In fr, this message translates to:
+  /// **'✓ compréhension conservée'**
+  String get speedCapValidated;
+
+  /// No description provided for @speedCapCeiling.
+  ///
+  /// In fr, this message translates to:
+  /// **'TON PLAFOND'**
+  String get speedCapCeiling;
+
+  /// No description provided for @speedCapReal.
+  ///
+  /// In fr, this message translates to:
+  /// **'Plafond validé : {percent} % de compréhension.'**
+  String speedCapReal(int percent);
+
+  /// No description provided for @speedCapFake.
+  ///
+  /// In fr, this message translates to:
+  /// **'Trop rapide : seulement {percent} % de compréhension. Redescends d\'un cran.'**
+  String speedCapFake(int percent);
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

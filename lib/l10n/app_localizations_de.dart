@@ -414,6 +414,54 @@ class AppLocalizationsDe extends AppLocalizations {
   String get mnemonicsSubtitle => 'Gedächtnispalast, Chunking, Bilder…';
 
   @override
+  String get exCompetitionTitle => 'Wettkampf';
+
+  @override
+  String get exCompetitionSubtitle => 'Kombiscore = WpM × Verständnis';
+
+  @override
+  String get competitionReadHint =>
+      'Lies schnell UND gut: der Score kombiniert beides.';
+
+  @override
+  String get competitionDone => 'Fertig';
+
+  @override
+  String get competitionScoreLabel => 'SCORE';
+
+  @override
+  String get competitionScoreCaption => 'effektive Wörter / Min';
+
+  @override
+  String get exSpeedCapTitle => 'Geschwindigkeitslimit';
+
+  @override
+  String get exSpeedCapSubtitle => 'Finde deine nutzbare Höchst-WpM';
+
+  @override
+  String get speedCapHint =>
+      'Die Geschwindigkeit steigt alle 10 s. Tippe STOP, sobald du den Faden verlierst; der Quiz zeigt, ob dein Limit echt ist.';
+
+  @override
+  String get speedCapStop => 'STOP — verloren';
+
+  @override
+  String get speedCapValidated => '✓ Verständnis erhalten';
+
+  @override
+  String get speedCapCeiling => 'DEIN LIMIT';
+
+  @override
+  String speedCapReal(int percent) {
+    return 'Limit bestätigt: $percent % Verständnis.';
+  }
+
+  @override
+  String speedCapFake(int percent) {
+    return 'Zu schnell: nur $percent % Verständnis. Eine Stufe zurück.';
+  }
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

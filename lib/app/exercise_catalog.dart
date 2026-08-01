@@ -88,6 +88,18 @@ const List<ExerciseInfo> exerciseCatalog = [
     color: Color(0xFF8D6E63),
     needsText: true,
   ),
+  ExerciseInfo(
+    type: ExerciseType.competition,
+    icon: Icons.emoji_events,
+    color: Color(0xFFF57C00),
+    needsText: true,
+  ),
+  ExerciseInfo(
+    type: ExerciseType.speedCap,
+    icon: Icons.trending_up,
+    color: Color(0xFF3949AB),
+    needsText: true,
+  ),
 ];
 
 String exerciseTitle(AppLocalizations l10n, ExerciseType type) =>
@@ -103,6 +115,8 @@ String exerciseTitle(AppLocalizations l10n, ExerciseType type) =>
       ExerciseType.keywords => l10n.exKeywordsTitle,
       ExerciseType.columns => l10n.exColumnsTitle,
       ExerciseType.noSubvocal => l10n.exNoSubvocalTitle,
+      ExerciseType.competition => l10n.exCompetitionTitle,
+      ExerciseType.speedCap => l10n.exSpeedCapTitle,
     };
 
 String exerciseSubtitle(AppLocalizations l10n, ExerciseType type) =>
@@ -118,4 +132,6 @@ String exerciseSubtitle(AppLocalizations l10n, ExerciseType type) =>
       ExerciseType.keywords => l10n.exKeywordsSubtitle,
       ExerciseType.columns => l10n.exColumnsSubtitle,
       ExerciseType.noSubvocal => l10n.exNoSubvocalSubtitle,
+      ExerciseType.competition => l10n.exCompetitionSubtitle,
+      ExerciseType.speedCap => l10n.exSpeedCapSubtitle,
     };

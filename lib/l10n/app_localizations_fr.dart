@@ -416,6 +416,54 @@ class AppLocalizationsFr extends AppLocalizations {
   String get mnemonicsSubtitle => 'Palais de mémoire, chunking, imagerie…';
 
   @override
+  String get exCompetitionTitle => 'Compétition';
+
+  @override
+  String get exCompetitionSubtitle => 'Score composite = mpm × compréhension';
+
+  @override
+  String get competitionReadHint =>
+      'Lis vite ET bien : le score final combine les deux.';
+
+  @override
+  String get competitionDone => 'J\'ai fini';
+
+  @override
+  String get competitionScoreLabel => 'SCORE';
+
+  @override
+  String get competitionScoreCaption => 'mots efficaces / min';
+
+  @override
+  String get exSpeedCapTitle => 'Vitesse plafond';
+
+  @override
+  String get exSpeedCapSubtitle => 'Trouve ta mpm maximale utile';
+
+  @override
+  String get speedCapHint =>
+      'La vitesse augmente toutes les 10 s. Tape STOP dès que tu perds le fil ; le quiz validera si ton plafond est réel.';
+
+  @override
+  String get speedCapStop => 'STOP je perds';
+
+  @override
+  String get speedCapValidated => '✓ compréhension conservée';
+
+  @override
+  String get speedCapCeiling => 'TON PLAFOND';
+
+  @override
+  String speedCapReal(int percent) {
+    return 'Plafond validé : $percent % de compréhension.';
+  }
+
+  @override
+  String speedCapFake(int percent) {
+    return 'Trop rapide : seulement $percent % de compréhension. Redescends d\'un cran.';
+  }
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

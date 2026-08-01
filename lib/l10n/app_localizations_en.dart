@@ -412,6 +412,54 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mnemonicsSubtitle => 'Memory palace, chunking, imagery…';
 
   @override
+  String get exCompetitionTitle => 'Competition';
+
+  @override
+  String get exCompetitionSubtitle => 'Composite score = wpm × comprehension';
+
+  @override
+  String get competitionReadHint =>
+      'Read fast AND well: the final score combines both.';
+
+  @override
+  String get competitionDone => 'Done reading';
+
+  @override
+  String get competitionScoreLabel => 'SCORE';
+
+  @override
+  String get competitionScoreCaption => 'effective words / min';
+
+  @override
+  String get exSpeedCapTitle => 'Speed ceiling';
+
+  @override
+  String get exSpeedCapSubtitle => 'Find your useful maximum wpm';
+
+  @override
+  String get speedCapHint =>
+      'Speed goes up every 10 s. Tap STOP as soon as you lose the thread; the quiz will validate whether your ceiling is real.';
+
+  @override
+  String get speedCapStop => 'STOP — losing it';
+
+  @override
+  String get speedCapValidated => '✓ comprehension holding';
+
+  @override
+  String get speedCapCeiling => 'YOUR CEILING';
+
+  @override
+  String speedCapReal(int percent) {
+    return 'Ceiling confirmed: $percent% comprehension.';
+  }
+
+  @override
+  String speedCapFake(int percent) {
+    return 'Too fast: only $percent% comprehension. Ease off a step.';
+  }
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

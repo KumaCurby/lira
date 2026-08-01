@@ -16,6 +16,8 @@ const Set<ExerciseType> _readingTypes = {
   ExerciseType.keywords,
   ExerciseType.columns,
   ExerciseType.noSubvocal,
+  ExerciseType.competition,
+  ExerciseType.speedCap,
 };
 
 /// Onglet « Progrès » : statistiques, courbe de vitesse et badges.

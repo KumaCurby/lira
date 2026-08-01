@@ -331,5 +331,140 @@
         "correctIndex": 1
       }
     ]
+  },
+  {
+    "id": "corpus-contest-neurones",
+    "title": "Le cerveau, machine à prédire",
+    "difficulty": 5,
+    "scanTarget": "neurones",
+    "body": "Longtemps décrit comme un simple récepteur passif, le cerveau est aujourd'hui envisagé par les neurosciences comme une machine à prédire : à chaque instant, il génère des hypothèses sur ce qu'il va percevoir, et ne mobilise l'attention que pour corriger les écarts entre ces attentes et le signal réel. Ce cadre théorique, dit de « codage prédictif », rend compte de phénomènes aussi variés que les illusions perceptives, l'apprentissage moteur ou l'attention sélective.\n\nSur le plan neuronal, cette prédiction repose sur des boucles descendantes issues du cortex frontal qui influencent, dès les premières étapes du traitement, l'activité des neurones sensoriels. Le cerveau n'attend pas de recevoir toutes les données pour les interpréter : il complète, anticipe, corrige. En lecture rapide, cette anticipation permet de sauter des mots-outils sans perdre le sens — le lecteur entraîné devine ce qui arrive et n'a plus besoin de le décoder lettre à lettre.",
+    "questions": [
+      {
+        "prompt": "Quel modèle décrit le cerveau selon le texte ?",
+        "options": [
+          "Un récepteur passif",
+          "Une machine à prédire",
+          "Un simple filtre"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "D'où viennent les boucles qui influencent le traitement ?",
+        "options": [
+          "Des yeux",
+          "Du cortex frontal",
+          "De la moelle épinière"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Pourquoi peut-on sauter les mots-outils en lecture rapide ?",
+        "options": [
+          "Parce qu'ils sont invisibles",
+          "Parce que le cerveau les anticipe",
+          "Parce qu'ils ne sont pas écrits"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Qu'entend-on par « codage prédictif » ?",
+        "options": [
+          "Un algorithme informatique",
+          "Un cadre qui décrit le cerveau comme anticipateur",
+          "Une méthode de mémorisation"
+        ],
+        "correctIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "corpus-contest-migrations",
+    "title": "Les migrations climatiques",
+    "difficulty": 5,
+    "scanTarget": "climat",
+    "body": "Les migrations liées au climat ne sont plus une projection : dès aujourd'hui, la sécheresse au Sahel, la montée des eaux dans le delta du Bengale ou la fonte du pergélisol en Sibérie déplacent chaque année plusieurs millions de personnes. Ces déplacements restent majoritairement internes aux pays concernés, mais leur ampleur pose un défi inédit aux politiques publiques : l'aide humanitaire, pensée pour des crises brèves, doit s'adapter à des situations durables.\n\nLes projections des climatologues estiment qu'entre 150 et 300 millions de personnes pourraient être contraintes de quitter leur territoire d'ici la fin du siècle si les émissions actuelles se poursuivent. Face à cette perspective, plusieurs États ont commencé à codifier un statut juridique de réfugié climatique — inexistant dans la convention de Genève. Le débat oppose ceux qui plaident pour une nouvelle convention internationale et ceux qui préfèrent adapter les cadres existants.",
+    "questions": [
+      {
+        "prompt": "Les migrations climatiques sont-elles majoritairement…",
+        "options": [
+          "Internationales",
+          "Internes aux pays concernés",
+          "Volontaires et temporaires"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Combien de personnes pourraient être déplacées d'ici la fin du siècle ?",
+        "options": [
+          "10 à 50 millions",
+          "150 à 300 millions",
+          "Plus d'un milliard"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Le statut de réfugié climatique est-il reconnu par la convention de Genève ?",
+        "options": [
+          "Oui, depuis 1951",
+          "Non, il en est absent",
+          "Uniquement pour certaines îles"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Quelle tension traverse le débat juridique ?",
+        "options": [
+          "Nouvelle convention vs adaptation des cadres existants",
+          "Aide humanitaire vs pas d'aide",
+          "Pays riches vs pays pauvres"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "corpus-contest-chiffrement",
+    "title": "Le chiffrement homomorphe",
+    "difficulty": 5,
+    "scanTarget": "chiffrement",
+    "body": "Le chiffrement traditionnel garantit la confidentialité au repos et en transit, mais impose de déchiffrer les données avant toute opération de calcul — ce qui les expose, ne serait-ce qu'un instant, au serveur qui les traite. Le chiffrement homomorphe renverse ce compromis : il permet de faire des additions et des multiplications directement sur les chiffrés, sans jamais les déchiffrer. Le résultat, une fois déchiffré côté client, est identique à celui qu'on aurait obtenu en clair.\n\nLongtemps théorique, cette famille de techniques est devenue utilisable en pratique depuis la construction de Gentry en 2009 et ses raffinements successifs (BFV, CKKS, TFHE). Le coût calculatoire reste cependant considérable : une opération sur chiffrés peut être des milliers de fois plus lente qu'en clair. Les usages concrets se limitent aujourd'hui à des scénarios très sensibles — vote électronique, analyse de dossiers médicaux, requêtes bancaires en aveugle — où la garantie « le serveur n'apprend rien » vaut le surcoût.",
+    "questions": [
+      {
+        "prompt": "Qu'apporte le chiffrement homomorphe par rapport au chiffrement classique ?",
+        "options": [
+          "Il est plus rapide",
+          "Il permet de calculer sur les chiffrés sans les déchiffrer",
+          "Il utilise des clés plus courtes"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "En quelle année Gentry rend-il la technique utilisable ?",
+        "options": [
+          "1999",
+          "2009",
+          "2019"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Quel est le principal frein aujourd'hui ?",
+        "options": [
+          "La cryptographie n'est pas assez sûre",
+          "Les opérations sont beaucoup plus lentes qu'en clair",
+          "Personne n'a besoin de ces garanties"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "prompt": "Quel exemple d'usage est cité dans le texte ?",
+        "options": [
+          "Le streaming vidéo",
+          "Le vote électronique",
+          "La messagerie instantanée grand public"
+        ],
+        "correctIndex": 1
+      }
+    ]
   }
 ]

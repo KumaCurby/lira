@@ -13,6 +13,8 @@ enum ExerciseType {
   keywords,
   columns,
   noSubvocal,
+  competition,
+  speedCap,
 }
 
 /// LR2 — Trace d'une session de lecture/exercice mesurée.

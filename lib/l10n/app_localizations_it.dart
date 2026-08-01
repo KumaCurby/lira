@@ -415,6 +415,55 @@ class AppLocalizationsIt extends AppLocalizations {
   String get mnemonicsSubtitle => 'Palazzo della memoria, chunking, immagini…';
 
   @override
+  String get exCompetitionTitle => 'Competizione';
+
+  @override
+  String get exCompetitionSubtitle =>
+      'Punteggio composito = ppm × comprensione';
+
+  @override
+  String get competitionReadHint =>
+      'Leggi veloce E bene: il punteggio finale combina i due.';
+
+  @override
+  String get competitionDone => 'Ho finito';
+
+  @override
+  String get competitionScoreLabel => 'PUNTEGGIO';
+
+  @override
+  String get competitionScoreCaption => 'parole efficaci / min';
+
+  @override
+  String get exSpeedCapTitle => 'Velocità limite';
+
+  @override
+  String get exSpeedCapSubtitle => 'Trova la tua ppm massima utile';
+
+  @override
+  String get speedCapHint =>
+      'La velocità sale ogni 10 s. Tocca STOP appena perdi il filo; il quiz confermerà se il tuo limite è reale.';
+
+  @override
+  String get speedCapStop => 'STOP mi perdo';
+
+  @override
+  String get speedCapValidated => '✓ comprensione mantenuta';
+
+  @override
+  String get speedCapCeiling => 'IL TUO LIMITE';
+
+  @override
+  String speedCapReal(int percent) {
+    return 'Limite convalidato: $percent % di comprensione.';
+  }
+
+  @override
+  String speedCapFake(int percent) {
+    return 'Troppo veloce: solo $percent % di comprensione. Scala di un gradino.';
+  }
+
+  @override
   String get wordsHint =>
       'Le parole sono in disordine; la prima e l\'ultima restano al loro posto. Ricostruisci il senso.';
 
