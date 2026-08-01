@@ -736,6 +736,108 @@ abstract class AppLocalizations {
   /// **'Tempo : {count} bpm'**
   String noSubvocalTempo(int count);
 
+  /// No description provided for @takeNotes.
+  ///
+  /// In fr, this message translates to:
+  /// **'Prendre des notes'**
+  String get takeNotes;
+
+  /// No description provided for @noteEditorTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mes notes'**
+  String get noteEditorTitle;
+
+  /// No description provided for @save.
+  ///
+  /// In fr, this message translates to:
+  /// **'Enregistrer'**
+  String get save;
+
+  /// No description provided for @noteTabSummary.
+  ///
+  /// In fr, this message translates to:
+  /// **'Résumé'**
+  String get noteTabSummary;
+
+  /// No description provided for @noteTabCornell.
+  ///
+  /// In fr, this message translates to:
+  /// **'Cornell'**
+  String get noteTabCornell;
+
+  /// No description provided for @noteSummaryHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'En 3 phrases, résume ce que tu viens de lire. C\'est court, précis, ça ancre le sens.'**
+  String get noteSummaryHint;
+
+  /// No description provided for @noteSummaryPlaceholder.
+  ///
+  /// In fr, this message translates to:
+  /// **'Idée 1, idée 2, idée 3…'**
+  String get noteSummaryPlaceholder;
+
+  /// No description provided for @noteCornellHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Méthode Cornell : à droite tes notes détaillées, à gauche des mots-clés / questions, en bas le résumé final.'**
+  String get noteCornellHint;
+
+  /// No description provided for @noteCornellCues.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mots-clés / questions'**
+  String get noteCornellCues;
+
+  /// No description provided for @noteCornellCuesHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Un mot par ligne'**
+  String get noteCornellCuesHint;
+
+  /// No description provided for @noteCornellNotes.
+  ///
+  /// In fr, this message translates to:
+  /// **'Notes'**
+  String get noteCornellNotes;
+
+  /// No description provided for @noteCornellNotesHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Détaille ici ce que tu retiens'**
+  String get noteCornellNotesHint;
+
+  /// No description provided for @noteCornellSummary.
+  ///
+  /// In fr, this message translates to:
+  /// **'Résumé'**
+  String get noteCornellSummary;
+
+  /// No description provided for @myNotes.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mes notes'**
+  String get myNotes;
+
+  /// No description provided for @myNotesEmpty.
+  ///
+  /// In fr, this message translates to:
+  /// **'Aucune note pour l\'instant. Prends-en une après un exercice !'**
+  String get myNotesEmpty;
+
+  /// No description provided for @mnemonicsTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Techniques de mémorisation'**
+  String get mnemonicsTitle;
+
+  /// No description provided for @mnemonicsSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Palais de mémoire, chunking, imagerie…'**
+  String get mnemonicsSubtitle;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

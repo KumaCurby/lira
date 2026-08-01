@@ -362,6 +362,60 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String get takeNotes => 'Prendre des notes';
+
+  @override
+  String get noteEditorTitle => 'Mes notes';
+
+  @override
+  String get save => 'Enregistrer';
+
+  @override
+  String get noteTabSummary => 'Résumé';
+
+  @override
+  String get noteTabCornell => 'Cornell';
+
+  @override
+  String get noteSummaryHint =>
+      'En 3 phrases, résume ce que tu viens de lire. C\'est court, précis, ça ancre le sens.';
+
+  @override
+  String get noteSummaryPlaceholder => 'Idée 1, idée 2, idée 3…';
+
+  @override
+  String get noteCornellHint =>
+      'Méthode Cornell : à droite tes notes détaillées, à gauche des mots-clés / questions, en bas le résumé final.';
+
+  @override
+  String get noteCornellCues => 'Mots-clés / questions';
+
+  @override
+  String get noteCornellCuesHint => 'Un mot par ligne';
+
+  @override
+  String get noteCornellNotes => 'Notes';
+
+  @override
+  String get noteCornellNotesHint => 'Détaille ici ce que tu retiens';
+
+  @override
+  String get noteCornellSummary => 'Résumé';
+
+  @override
+  String get myNotes => 'Mes notes';
+
+  @override
+  String get myNotesEmpty =>
+      'Aucune note pour l\'instant. Prends-en une après un exercice !';
+
+  @override
+  String get mnemonicsTitle => 'Techniques de mémorisation';
+
+  @override
+  String get mnemonicsSubtitle => 'Palais de mémoire, chunking, imagerie…';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

@@ -12,6 +12,7 @@ import '../providers.dart';
 import '../theme.dart';
 import '../widgets/quiz_view.dart';
 import '../widgets/result_card.dart';
+import '../widgets/take_notes_button.dart';
 
 /// Intensité d'estompage des mots-outils.
 enum _KwMode { normal, dim, content }
@@ -270,6 +271,8 @@ class _KeywordsScreenState extends ConsumerState<KeywordsScreen> {
             ),
           ],
           const SizedBox(height: 20),
+          TakeNotesButton(text: widget.text),
+          const SizedBox(height: 10),
           FilledButton.tonal(
             onPressed: () => Navigator.of(context).pop(),
             child: Text(l10n.finish),

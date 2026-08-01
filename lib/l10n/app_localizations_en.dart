@@ -359,6 +359,59 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get takeNotes => 'Take notes';
+
+  @override
+  String get noteEditorTitle => 'My notes';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get noteTabSummary => 'Summary';
+
+  @override
+  String get noteTabCornell => 'Cornell';
+
+  @override
+  String get noteSummaryHint =>
+      'In 3 sentences, sum up what you just read. Short, precise — it anchors the meaning.';
+
+  @override
+  String get noteSummaryPlaceholder => 'Idea 1, idea 2, idea 3…';
+
+  @override
+  String get noteCornellHint =>
+      'Cornell method: detailed notes on the right, cues/questions on the left, final summary at the bottom.';
+
+  @override
+  String get noteCornellCues => 'Cues / questions';
+
+  @override
+  String get noteCornellCuesHint => 'One word per line';
+
+  @override
+  String get noteCornellNotes => 'Notes';
+
+  @override
+  String get noteCornellNotesHint => 'Write what you take away';
+
+  @override
+  String get noteCornellSummary => 'Summary';
+
+  @override
+  String get myNotes => 'My notes';
+
+  @override
+  String get myNotesEmpty => 'No notes yet. Take one after an exercise!';
+
+  @override
+  String get mnemonicsTitle => 'Memory techniques';
+
+  @override
+  String get mnemonicsSubtitle => 'Memory palace, chunking, imagery…';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

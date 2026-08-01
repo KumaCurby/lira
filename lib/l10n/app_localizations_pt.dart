@@ -361,6 +361,60 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get takeNotes => 'Tomar notas';
+
+  @override
+  String get noteEditorTitle => 'As minhas notas';
+
+  @override
+  String get save => 'Guardar';
+
+  @override
+  String get noteTabSummary => 'Resumo';
+
+  @override
+  String get noteTabCornell => 'Cornell';
+
+  @override
+  String get noteSummaryHint =>
+      'Em 3 frases, resume o que acabaste de ler. Curto, preciso — ancora o sentido.';
+
+  @override
+  String get noteSummaryPlaceholder => 'Ideia 1, ideia 2, ideia 3…';
+
+  @override
+  String get noteCornellHint =>
+      'Método Cornell: notas detalhadas à direita, palavras-chave/perguntas à esquerda, resumo no fundo.';
+
+  @override
+  String get noteCornellCues => 'Palavras-chave / perguntas';
+
+  @override
+  String get noteCornellCuesHint => 'Uma palavra por linha';
+
+  @override
+  String get noteCornellNotes => 'Notas';
+
+  @override
+  String get noteCornellNotesHint => 'Escreve o que reténs';
+
+  @override
+  String get noteCornellSummary => 'Resumo';
+
+  @override
+  String get myNotes => 'As minhas notas';
+
+  @override
+  String get myNotesEmpty =>
+      'Sem notas por agora. Toma uma depois de um exercício!';
+
+  @override
+  String get mnemonicsTitle => 'Técnicas de memorização';
+
+  @override
+  String get mnemonicsSubtitle => 'Palácio da memória, chunking, imagens…';
+
+  @override
   String get wordsHint =>
       'As palavras estão desordenadas; a primeira e a última ficam no lugar. Reconstrói o sentido.';
 

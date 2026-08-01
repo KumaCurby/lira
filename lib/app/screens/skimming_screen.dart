@@ -10,6 +10,7 @@ import '../../l10n/app_localizations.dart';
 import '../providers.dart';
 import '../widgets/quiz_view.dart';
 import '../widgets/result_card.dart';
+import '../widgets/take_notes_button.dart';
 
 enum _Phase { skim, quiz, result }
 
@@ -185,6 +186,8 @@ class _SkimmingScreenState extends ConsumerState<SkimmingScreen> {
         children: [
           ResultCard(wpm: _wpm, comprehension: _comprehension),
           const SizedBox(height: 20),
+          TakeNotesButton(text: widget.text),
+          const SizedBox(height: 10),
           FilledButton.tonal(
             onPressed: () => Navigator.of(context).pop(),
             child: Text(AppLocalizations.of(context)!.finish),

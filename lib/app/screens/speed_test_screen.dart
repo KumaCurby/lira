@@ -10,6 +10,7 @@ import '../../l10n/app_localizations.dart';
 import '../providers.dart';
 import '../widgets/quiz_view.dart';
 import '../widgets/result_card.dart';
+import '../widgets/take_notes_button.dart';
 
 enum _Phase { reading, quiz, result }
 
@@ -166,6 +167,8 @@ class _SpeedTestScreenState extends ConsumerState<SpeedTestScreen> {
             effectiveWpm: effective,
           ),
           const SizedBox(height: 20),
+          TakeNotesButton(text: widget.text),
+          const SizedBox(height: 10),
           FilledButton.tonal(
             onPressed: () => Navigator.of(context).pop(),
             child: Text(AppLocalizations.of(context)!.finish),

@@ -8,14 +8,17 @@ import '../core/random/secure_random_source.dart';
 import '../data/import/document_import_service.dart';
 import '../data/import/pdf_text_reader.dart';
 import '../data/import/pdf_text_reader_syncfusion.dart';
+import '../data/prefs/shared_prefs_notes_repository.dart';
 import '../data/prefs/shared_prefs_progress_repository.dart';
 import '../data/prefs/shared_prefs_session_repository.dart';
 import '../data/prefs/shared_prefs_settings_repository.dart';
 import '../data/prefs/shared_prefs_srs_repository.dart';
 import '../domain/measure/comprehension_score.dart';
 import '../domain/measure/reading_session.dart';
+import '../domain/notes/text_note.dart';
 import '../domain/progress/progress_tracker.dart';
 import '../domain/progress/reading_progress.dart';
+import '../domain/repositories/notes_repository.dart';
 import '../domain/repositories/progress_repository.dart';
 import '../domain/repositories/session_repository.dart';
 import '../domain/repositories/settings_repository.dart';
@@ -55,6 +58,9 @@ final progressRepositoryProvider = Provider<ProgressRepository>(
 );
 final srsRepositoryProvider = Provider<SrsRepository>(
   (ref) => SharedPrefsSrsRepository(ref.watch(sharedPreferencesProvider)),
+);
+final notesRepositoryProvider = Provider<NotesRepository>(
+  (ref) => SharedPrefsNotesRepository(ref.watch(sharedPreferencesProvider)),
 );
 
 /// Rappel quotidien (implémentation native ou no-op web ; init/sync dans main).
@@ -109,6 +115,19 @@ Future<void> recordSession(WidgetRef ref, ReadingSession session) async {
 final srsCardsProvider = FutureProvider<List<SrsCard>>(
   (ref) => ref.watch(srsRepositoryProvider).all(),
 );
+
+/// Toutes les notes, triées du plus récent au plus ancien.
+final notesProvider = FutureProvider<List<TextNote>>(
+  (ref) => ref.watch(notesRepositoryProvider).all(),
+);
+
+/// Notes attachées à un texte donné.
+final notesForTextProvider = FutureProvider.family<List<TextNote>, String>((
+  ref,
+  textId,
+) {
+  return ref.watch(notesRepositoryProvider).forText(textId);
+});
 
 /// Cartes SRS dues à `now` (triées par urgence).
 final dueSrsCardsProvider = FutureProvider<List<SrsCard>>((ref) async {

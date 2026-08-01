@@ -5,6 +5,8 @@ import '../../domain/settings/reading_settings.dart';
 import '../../l10n/app_localizations.dart';
 import '../providers.dart';
 import '../widgets/language_flag.dart';
+import 'mnemonics_screen.dart';
+import 'notes_list_screen.dart';
 
 /// Onglet « Réglages » : langue, préférences de lecture, rappel, données.
 class SettingsScreen extends ConsumerWidget {
@@ -295,6 +297,24 @@ class SettingsScreen extends ConsumerWidget {
             ),
           const Divider(),
           ListTile(
+            leading: const Icon(Icons.edit_note),
+            title: Text(l10n.myNotes),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const NotesListScreen())),
+          ),
+          ListTile(
+            leading: const Icon(Icons.psychology_alt_outlined),
+            title: Text(l10n.mnemonicsTitle),
+            subtitle: Text(l10n.mnemonicsSubtitle),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const MnemonicsScreen())),
+          ),
+          const Divider(),
+          ListTile(
             leading: Icon(
               Icons.delete_sweep,
               color: Theme.of(context).colorScheme.error,
@@ -304,10 +324,12 @@ class SettingsScreen extends ConsumerWidget {
             onTap: () async {
               await ref.read(sessionRepositoryProvider).clear();
               await ref.read(srsRepositoryProvider).clear();
+              await ref.read(notesRepositoryProvider).clear();
               ref.invalidate(sessionsProvider);
               ref.invalidate(progressProvider);
               ref.invalidate(srsCardsProvider);
               ref.invalidate(dueSrsCardsProvider);
+              ref.invalidate(notesProvider);
               if (context.mounted) {
                 ScaffoldMessenger.of(
                   context,

@@ -361,6 +361,59 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
+  String get takeNotes => 'Notizen machen';
+
+  @override
+  String get noteEditorTitle => 'Meine Notizen';
+
+  @override
+  String get save => 'Speichern';
+
+  @override
+  String get noteTabSummary => 'Zusammenfassung';
+
+  @override
+  String get noteTabCornell => 'Cornell';
+
+  @override
+  String get noteSummaryHint =>
+      'Fasse in 3 Sätzen zusammen, was du gelesen hast. Kurz, präzise — das verankert den Sinn.';
+
+  @override
+  String get noteSummaryPlaceholder => 'Idee 1, Idee 2, Idee 3…';
+
+  @override
+  String get noteCornellHint =>
+      'Cornell-Methode: rechts deine ausführlichen Notizen, links Stichwörter/Fragen, unten das Fazit.';
+
+  @override
+  String get noteCornellCues => 'Stichwörter / Fragen';
+
+  @override
+  String get noteCornellCuesHint => 'Ein Wort pro Zeile';
+
+  @override
+  String get noteCornellNotes => 'Notizen';
+
+  @override
+  String get noteCornellNotesHint => 'Schreibe, was du behältst';
+
+  @override
+  String get noteCornellSummary => 'Zusammenfassung';
+
+  @override
+  String get myNotes => 'Meine Notizen';
+
+  @override
+  String get myNotesEmpty => 'Noch keine Notiz. Mach eine nach einer Übung!';
+
+  @override
+  String get mnemonicsTitle => 'Merktechniken';
+
+  @override
+  String get mnemonicsSubtitle => 'Gedächtnispalast, Chunking, Bilder…';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 
