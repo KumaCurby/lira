@@ -532,6 +532,38 @@ class AppLocalizationsDe extends AppLocalizations {
   String get challengeNotesDesc => '5 persönliche Notizen schreiben.';
 
   @override
+  String get badgeRocket => 'Rakete · 700 WpM';
+
+  @override
+  String get badgeChampion => 'Champion · 1000 WpM';
+
+  @override
+  String get benchmarksLine =>
+      'Referenzen: Durchschnitt ≈ 250 · gut ≈ 450 · Champion ≈ 1000+ WpM';
+
+  @override
+  String get filterAllExercises => 'Alle';
+
+  @override
+  String get contestHistoryTitle => 'Wettkampf-Historie';
+
+  @override
+  String get contestScoreUnit => 'Pkt';
+
+  @override
+  String get exportProgress => 'Bericht exportieren';
+
+  @override
+  String get exportProgressSub =>
+      'Textzusammenfassung zum Kopieren oder Teilen';
+
+  @override
+  String get copiedToClipboard => 'In Zwischenablage kopiert';
+
+  @override
+  String get copy => 'Kopieren';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

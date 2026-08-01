@@ -10,6 +10,7 @@ import '../exercise_catalog.dart';
 import '../navigation.dart';
 import '../providers.dart';
 import '../theme.dart';
+import 'quick_session_screen.dart';
 import 'review_screen.dart';
 import 'text_picker_screen.dart';
 
@@ -67,6 +68,8 @@ class TrainingScreen extends ConsumerWidget {
                 const _HeroBanner(),
                 const SizedBox(height: 14),
                 _DailyGoalCard(doneToday: doneToday),
+                const SizedBox(height: 10),
+                const _TodaySessionCard(),
                 const SizedBox(height: 10),
                 const _ReviewCard(),
                 const SizedBox(height: 20),
@@ -244,6 +247,64 @@ class _DailyGoalCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Widget « Aujourd'hui » sur l'accueil : ouvre la séance combinée 15 min.
+class _TodaySessionCard extends StatelessWidget {
+  const _TodaySessionCard();
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
+      onTap: () => Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (_) => const QuickSessionScreen())),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: Theme.of(context).cardTheme.color,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: AppColors.primarySoft.withValues(alpha: 0.5),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.flash_on,
+                color: AppColors.primary,
+                size: 20,
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    l10n.quickSessionTitle,
+                    style: const TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                  Text(
+                    l10n.quickSessionSubtitle,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.arrow_forward_ios, size: 16),
+          ],
+        ),
       ),
     );
   }

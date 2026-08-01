@@ -535,6 +535,37 @@ class AppLocalizationsFr extends AppLocalizations {
   String get challengeNotesDesc => 'Rédiger 5 notes personnelles.';
 
   @override
+  String get badgeRocket => 'Fusée · 700 mpm';
+
+  @override
+  String get badgeChampion => 'Champion · 1000 mpm';
+
+  @override
+  String get benchmarksLine =>
+      'Repères : moyen ≈ 250 · bon ≈ 450 · champion ≈ 1000+ mpm';
+
+  @override
+  String get filterAllExercises => 'Tous';
+
+  @override
+  String get contestHistoryTitle => 'Historique compétition';
+
+  @override
+  String get contestScoreUnit => 'pts';
+
+  @override
+  String get exportProgress => 'Exporter le rapport';
+
+  @override
+  String get exportProgressSub => 'Récap texte à copier ou partager';
+
+  @override
+  String get copiedToClipboard => 'Copié dans le presse-papier';
+
+  @override
+  String get copy => 'Copier';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

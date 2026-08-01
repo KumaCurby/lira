@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/measure/reading_session.dart';
@@ -75,6 +76,7 @@ class _PacerScreenState extends ConsumerState<PacerScreen> {
     }
     _timer = Timer(_schedule[_step].duration, () {
       if (!mounted) return;
+      HapticFeedback.selectionClick();
       setState(() => _step++);
       _tick();
     });

@@ -1054,6 +1054,66 @@ abstract class AppLocalizations {
   /// **'Rédiger 5 notes personnelles.'**
   String get challengeNotesDesc;
 
+  /// No description provided for @badgeRocket.
+  ///
+  /// In fr, this message translates to:
+  /// **'Fusée · 700 mpm'**
+  String get badgeRocket;
+
+  /// No description provided for @badgeChampion.
+  ///
+  /// In fr, this message translates to:
+  /// **'Champion · 1000 mpm'**
+  String get badgeChampion;
+
+  /// No description provided for @benchmarksLine.
+  ///
+  /// In fr, this message translates to:
+  /// **'Repères : moyen ≈ 250 · bon ≈ 450 · champion ≈ 1000+ mpm'**
+  String get benchmarksLine;
+
+  /// No description provided for @filterAllExercises.
+  ///
+  /// In fr, this message translates to:
+  /// **'Tous'**
+  String get filterAllExercises;
+
+  /// No description provided for @contestHistoryTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Historique compétition'**
+  String get contestHistoryTitle;
+
+  /// No description provided for @contestScoreUnit.
+  ///
+  /// In fr, this message translates to:
+  /// **'pts'**
+  String get contestScoreUnit;
+
+  /// No description provided for @exportProgress.
+  ///
+  /// In fr, this message translates to:
+  /// **'Exporter le rapport'**
+  String get exportProgress;
+
+  /// No description provided for @exportProgressSub.
+  ///
+  /// In fr, this message translates to:
+  /// **'Récap texte à copier ou partager'**
+  String get exportProgressSub;
+
+  /// No description provided for @copiedToClipboard.
+  ///
+  /// In fr, this message translates to:
+  /// **'Copié dans le presse-papier'**
+  String get copiedToClipboard;
+
+  /// No description provided for @copy.
+  ///
+  /// In fr, this message translates to:
+  /// **'Copier'**
+  String get copy;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

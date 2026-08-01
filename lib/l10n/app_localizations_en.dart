@@ -529,6 +529,37 @@ class AppLocalizationsEn extends AppLocalizations {
   String get challengeNotesDesc => 'Write 5 personal notes.';
 
   @override
+  String get badgeRocket => 'Rocket · 700 wpm';
+
+  @override
+  String get badgeChampion => 'Champion · 1000 wpm';
+
+  @override
+  String get benchmarksLine =>
+      'Benchmarks: average ≈ 250 · good ≈ 450 · champion ≈ 1000+ wpm';
+
+  @override
+  String get filterAllExercises => 'All';
+
+  @override
+  String get contestHistoryTitle => 'Competition history';
+
+  @override
+  String get contestScoreUnit => 'pts';
+
+  @override
+  String get exportProgress => 'Export report';
+
+  @override
+  String get exportProgressSub => 'Text recap to copy or share';
+
+  @override
+  String get copiedToClipboard => 'Copied to clipboard';
+
+  @override
+  String get copy => 'Copy';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

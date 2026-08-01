@@ -532,6 +532,37 @@ class AppLocalizationsPt extends AppLocalizations {
   String get challengeNotesDesc => 'Escrever 5 notas pessoais.';
 
   @override
+  String get badgeRocket => 'Foguetão · 700 ppm';
+
+  @override
+  String get badgeChampion => 'Campeão · 1000 ppm';
+
+  @override
+  String get benchmarksLine =>
+      'Referências: médio ≈ 250 · bom ≈ 450 · campeão ≈ 1000+ ppm';
+
+  @override
+  String get filterAllExercises => 'Todos';
+
+  @override
+  String get contestHistoryTitle => 'Histórico de competição';
+
+  @override
+  String get contestScoreUnit => 'pts';
+
+  @override
+  String get exportProgress => 'Exportar relatório';
+
+  @override
+  String get exportProgressSub => 'Resumo em texto para copiar ou partilhar';
+
+  @override
+  String get copiedToClipboard => 'Copiado para a área de transferência';
+
+  @override
+  String get copy => 'Copiar';
+
+  @override
   String get wordsHint =>
       'As palavras estão desordenadas; a primeira e a última ficam no lugar. Reconstrói o sentido.';
 

@@ -128,7 +128,24 @@ class ProgressScreen extends ConsumerWidget {
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 12),
-              SizedBox(height: 200, child: _SpeedChart(sessions: reading)),
+              _FilteredSpeedChart(sessions: sessions),
+              const SizedBox(height: 12),
+              _BenchmarksLine(l10n: l10n),
+              if (sessions
+                  .where(
+                    (s) =>
+                        s.type == ExerciseType.competition ||
+                        s.type == ExerciseType.speedCap,
+                  )
+                  .isNotEmpty) ...[
+                const SizedBox(height: 20),
+                Text(
+                  l10n.contestHistoryTitle,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                const SizedBox(height: 12),
+                _ContestHistory(sessions: sessions),
+              ],
               const SizedBox(height: 20),
               Text(
                 l10n.badgesTitle,
@@ -321,6 +338,16 @@ class _Badges extends StatelessWidget {
         earned: speed.bestWpm >= 500,
       ),
       (
+        label: l10n.badgeRocket,
+        icon: Icons.rocket,
+        earned: speed.bestWpm >= 700,
+      ),
+      (
+        label: l10n.badgeChampion,
+        icon: Icons.emoji_events,
+        earned: speed.bestWpm >= 1000,
+      ),
+      (
         label: l10n.badgeExplorer,
         icon: Icons.explore,
         earned: typesTried.length >= 6,
@@ -344,6 +371,145 @@ class _Badges extends StatelessWidget {
             backgroundColor: badge.earned
                 ? Theme.of(context).colorScheme.primaryContainer
                 : null,
+          ),
+      ],
+    );
+  }
+}
+
+/// LR22 — Ligne de repères publics : situer sa vitesse dans le paysage.
+class _BenchmarksLine extends StatelessWidget {
+  const _BenchmarksLine({required this.l10n});
+  final AppLocalizations l10n;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      l10n.benchmarksLine,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        color: Theme.of(context).colorScheme.outline,
+        fontSize: 12,
+      ),
+    );
+  }
+}
+
+/// LR22 — Courbe filtrable par type d'exercice (chips au-dessus).
+class _FilteredSpeedChart extends StatefulWidget {
+  const _FilteredSpeedChart({required this.sessions});
+  final List<ReadingSession> sessions;
+
+  @override
+  State<_FilteredSpeedChart> createState() => _FilteredSpeedChartState();
+}
+
+class _FilteredSpeedChartState extends State<_FilteredSpeedChart> {
+  ExerciseType? _filter;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final base = widget.sessions.where(
+      (s) => _readingTypes.contains(s.type) && s.wpm > 0,
+    );
+    final filtered = _filter == null
+        ? base.toList()
+        : base.where((s) => s.type == _filter).toList();
+    // Chips : « tous » + les types déjà pratiqués
+    final types = base.map((s) => s.type).toSet().toList();
+
+    return Column(
+      children: [
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              ChoiceChip(
+                selected: _filter == null,
+                onSelected: (_) => setState(() => _filter = null),
+                label: Text(l10n.filterAllExercises),
+              ),
+              const SizedBox(width: 6),
+              for (final t in types) ...[
+                ChoiceChip(
+                  selected: _filter == t,
+                  onSelected: (_) => setState(() => _filter = t),
+                  label: Text(_shortLabelFor(l10n, t)),
+                ),
+                const SizedBox(width: 6),
+              ],
+            ],
+          ),
+        ),
+        const SizedBox(height: 8),
+        SizedBox(height: 200, child: _SpeedChart(sessions: filtered)),
+      ],
+    );
+  }
+
+  String _shortLabelFor(AppLocalizations l10n, ExerciseType t) => switch (t) {
+    ExerciseType.rsvp => 'RSVP',
+    ExerciseType.pacer => 'Pacer',
+    ExerciseType.speedTest => 'Speed',
+    ExerciseType.skimming => 'Skim',
+    ExerciseType.keywords => 'Keywords',
+    ExerciseType.columns => 'Cols',
+    ExerciseType.noSubvocal => 'NoVoice',
+    ExerciseType.competition => 'Contest',
+    ExerciseType.speedCap => 'Cap',
+    _ => '?',
+  };
+}
+
+/// LR22 — Historique dédié Compétition + Vitesse plafond, du plus récent au
+/// plus ancien.
+class _ContestHistory extends StatelessWidget {
+  const _ContestHistory({required this.sessions});
+  final List<ReadingSession> sessions;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final contest =
+        sessions
+            .where(
+              (s) =>
+                  s.type == ExerciseType.competition ||
+                  s.type == ExerciseType.speedCap,
+            )
+            .toList()
+          ..sort((a, b) => b.date.compareTo(a.date));
+
+    return Column(
+      children: [
+        for (final s in contest.take(10))
+          Padding(
+            padding: const EdgeInsets.only(bottom: 6),
+            child: Row(
+              children: [
+                Icon(
+                  s.type == ExerciseType.competition
+                      ? Icons.emoji_events
+                      : Icons.trending_up,
+                  size: 18,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    '${s.date.year}-${s.date.month.toString().padLeft(2, '0')}-${s.date.day.toString().padLeft(2, '0')}',
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ),
+                Text(
+                  s.type == ExerciseType.competition && s.comprehension != null
+                      ? '${(s.wpm * s.comprehension!).round()} ${l10n.contestScoreUnit}'
+                      : '${s.wpm} ${l10n.unitWpm}',
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+              ],
+            ),
           ),
       ],
     );

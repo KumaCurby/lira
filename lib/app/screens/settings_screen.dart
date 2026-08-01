@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../domain/progress/progress_report.dart';
 import '../../domain/settings/reading_settings.dart';
 import '../../l10n/app_localizations.dart';
 import '../providers.dart';
@@ -299,6 +301,53 @@ class SettingsScreen extends ConsumerWidget {
             onTap: () => Navigator.of(
               context,
             ).push(MaterialPageRoute(builder: (_) => const ChallengesScreen())),
+          ),
+          ListTile(
+            leading: const Icon(Icons.share),
+            title: Text(l10n.exportProgress),
+            subtitle: Text(l10n.exportProgressSub),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () async {
+              final sessions =
+                  ref.read(sessionsProvider).valueOrNull ?? const [];
+              final report = buildProgressReport(
+                sessions,
+                now: ref.read(clockProvider).now(),
+              );
+              if (!context.mounted) return;
+              await showDialog<void>(
+                context: context,
+                builder: (ctx) => AlertDialog(
+                  title: Text(l10n.exportProgress),
+                  content: SingleChildScrollView(
+                    child: SelectableText(
+                      report,
+                      style: const TextStyle(
+                        fontFamily: 'monospace',
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () async {
+                        await Clipboard.setData(ClipboardData(text: report));
+                        if (ctx.mounted) {
+                          ScaffoldMessenger.of(ctx).showSnackBar(
+                            SnackBar(content: Text(l10n.copiedToClipboard)),
+                          );
+                        }
+                      },
+                      child: Text(l10n.copy),
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pop(ctx),
+                      child: Text(l10n.finish),
+                    ),
+                  ],
+                ),
+              );
+            },
           ),
           const Divider(),
           SwitchListTile(
