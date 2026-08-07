@@ -1114,6 +1114,54 @@ abstract class AppLocalizations {
   /// **'Copier'**
   String get copy;
 
+  /// No description provided for @exWordLengthTitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Mots par longueur'**
+  String get exWordLengthTitle;
+
+  /// No description provided for @exWordLengthSubtitle.
+  ///
+  /// In fr, this message translates to:
+  /// **'Repère les mots courts, moyens ou longs'**
+  String get exWordLengthSubtitle;
+
+  /// No description provided for @wordLengthHint.
+  ///
+  /// In fr, this message translates to:
+  /// **'Choisis une plage de longueur : l\'app surligne les mots qui la respectent (Voir) ou n\'affiche qu\'eux (Filtrer). Reconstitue le sens.'**
+  String get wordLengthHint;
+
+  /// No description provided for @wordLengthShort.
+  ///
+  /// In fr, this message translates to:
+  /// **'3-4 lettres'**
+  String get wordLengthShort;
+
+  /// No description provided for @wordLengthMedium.
+  ///
+  /// In fr, this message translates to:
+  /// **'5-6 lettres'**
+  String get wordLengthMedium;
+
+  /// No description provided for @wordLengthLong.
+  ///
+  /// In fr, this message translates to:
+  /// **'7+ lettres'**
+  String get wordLengthLong;
+
+  /// No description provided for @wordLengthHighlight.
+  ///
+  /// In fr, this message translates to:
+  /// **'Voir'**
+  String get wordLengthHighlight;
+
+  /// No description provided for @wordLengthFilter.
+  ///
+  /// In fr, this message translates to:
+  /// **'Filtrer'**
+  String get wordLengthFilter;
+
   /// No description provided for @wordsHint.
   ///
   /// In fr, this message translates to:

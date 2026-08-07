@@ -566,6 +566,31 @@ class AppLocalizationsFr extends AppLocalizations {
   String get copy => 'Copier';
 
   @override
+  String get exWordLengthTitle => 'Mots par longueur';
+
+  @override
+  String get exWordLengthSubtitle => 'Repère les mots courts, moyens ou longs';
+
+  @override
+  String get wordLengthHint =>
+      'Choisis une plage de longueur : l\'app surligne les mots qui la respectent (Voir) ou n\'affiche qu\'eux (Filtrer). Reconstitue le sens.';
+
+  @override
+  String get wordLengthShort => '3-4 lettres';
+
+  @override
+  String get wordLengthMedium => '5-6 lettres';
+
+  @override
+  String get wordLengthLong => '7+ lettres';
+
+  @override
+  String get wordLengthHighlight => 'Voir';
+
+  @override
+  String get wordLengthFilter => 'Filtrer';
+
+  @override
   String get wordsHint =>
       'Les mots sont dans le désordre ; le premier et le dernier restent à leur place. Reconstruis le sens.';
 

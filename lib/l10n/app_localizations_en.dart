@@ -560,6 +560,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get copy => 'Copy';
 
   @override
+  String get exWordLengthTitle => 'Words by length';
+
+  @override
+  String get exWordLengthSubtitle => 'Spot short, medium or long words';
+
+  @override
+  String get wordLengthHint =>
+      'Pick a length range: the app highlights matching words (Show) or dims the rest (Filter). Reconstruct the meaning.';
+
+  @override
+  String get wordLengthShort => '3-4 letters';
+
+  @override
+  String get wordLengthMedium => '5-6 letters';
+
+  @override
+  String get wordLengthLong => '7+ letters';
+
+  @override
+  String get wordLengthHighlight => 'Show';
+
+  @override
+  String get wordLengthFilter => 'Filter';
+
+  @override
   String get wordsHint =>
       'The words are shuffled; the first and last stay put. Rebuild the meaning.';
 

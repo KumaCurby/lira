@@ -563,6 +563,31 @@ class AppLocalizationsPt extends AppLocalizations {
   String get copy => 'Copiar';
 
   @override
+  String get exWordLengthTitle => 'Palavras por comprimento';
+
+  @override
+  String get exWordLengthSubtitle => 'Deteta as curtas, médias ou longas';
+
+  @override
+  String get wordLengthHint =>
+      'Escolhe um intervalo de comprimento: a app realça as palavras (Ver) ou atenua as outras (Filtrar). Reconstrói o sentido.';
+
+  @override
+  String get wordLengthShort => '3-4 letras';
+
+  @override
+  String get wordLengthMedium => '5-6 letras';
+
+  @override
+  String get wordLengthLong => '7+ letras';
+
+  @override
+  String get wordLengthHighlight => 'Ver';
+
+  @override
+  String get wordLengthFilter => 'Filtrar';
+
+  @override
   String get wordsHint =>
       'As palavras estão desordenadas; a primeira e a última ficam no lugar. Reconstrói o sentido.';
 

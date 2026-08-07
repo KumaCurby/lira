@@ -564,6 +564,32 @@ class AppLocalizationsDe extends AppLocalizations {
   String get copy => 'Kopieren';
 
   @override
+  String get exWordLengthTitle => 'Wörter nach Länge';
+
+  @override
+  String get exWordLengthSubtitle =>
+      'Kurze, mittlere oder lange Wörter erkennen';
+
+  @override
+  String get wordLengthHint =>
+      'Wähle einen Längenbereich: die App hebt passende Wörter hervor (Zeigen) oder dimmt die anderen (Filtern). Rekonstruiere den Sinn.';
+
+  @override
+  String get wordLengthShort => '3-4 Buchstaben';
+
+  @override
+  String get wordLengthMedium => '5-6 Buchstaben';
+
+  @override
+  String get wordLengthLong => '7+ Buchstaben';
+
+  @override
+  String get wordLengthHighlight => 'Zeigen';
+
+  @override
+  String get wordLengthFilter => 'Filtern';
+
+  @override
   String get wordsHint =>
       'Die Wörter sind vertauscht; das erste und letzte bleiben. Stell den Sinn wieder her.';
 

@@ -80,4 +80,5 @@ String _labelFor(ExerciseType t) => switch (t) {
   ExerciseType.noSubvocal => 'Sans voix intérieure',
   ExerciseType.competition => 'Compétition',
   ExerciseType.speedCap => 'Vitesse plafond',
+  ExerciseType.wordLength => 'Mots par longueur',
 };

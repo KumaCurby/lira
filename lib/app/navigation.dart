@@ -8,6 +8,7 @@ import 'screens/keywords_screen.dart';
 import 'screens/no_subvocal_screen.dart';
 import 'screens/pacer_screen.dart';
 import 'screens/speed_cap_screen.dart';
+import 'screens/word_length_screen.dart';
 import 'screens/rsvp_screen.dart';
 import 'screens/scanning_screen.dart';
 import 'screens/schulte_screen.dart';
@@ -44,5 +45,7 @@ Widget exerciseScreenFor(ExerciseType type, ReadingText? text) {
       return CompetitionScreen(text: text!);
     case ExerciseType.speedCap:
       return SpeedCapScreen(text: text!);
+    case ExerciseType.wordLength:
+      return WordLengthScreen(text: text!);
   }
 }

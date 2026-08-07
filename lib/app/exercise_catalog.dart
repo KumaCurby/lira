@@ -100,6 +100,12 @@ const List<ExerciseInfo> exerciseCatalog = [
     color: Color(0xFF3949AB),
     needsText: true,
   ),
+  ExerciseInfo(
+    type: ExerciseType.wordLength,
+    icon: Icons.straighten,
+    color: Color(0xFF00ACC1),
+    needsText: true,
+  ),
 ];
 
 String exerciseTitle(AppLocalizations l10n, ExerciseType type) =>
@@ -117,6 +123,7 @@ String exerciseTitle(AppLocalizations l10n, ExerciseType type) =>
       ExerciseType.noSubvocal => l10n.exNoSubvocalTitle,
       ExerciseType.competition => l10n.exCompetitionTitle,
       ExerciseType.speedCap => l10n.exSpeedCapTitle,
+      ExerciseType.wordLength => l10n.exWordLengthTitle,
     };
 
 String exerciseSubtitle(AppLocalizations l10n, ExerciseType type) =>
@@ -134,4 +141,5 @@ String exerciseSubtitle(AppLocalizations l10n, ExerciseType type) =>
       ExerciseType.noSubvocal => l10n.exNoSubvocalSubtitle,
       ExerciseType.competition => l10n.exCompetitionSubtitle,
       ExerciseType.speedCap => l10n.exSpeedCapSubtitle,
+      ExerciseType.wordLength => l10n.exWordLengthSubtitle,
     };

@@ -15,6 +15,7 @@ enum ExerciseType {
   noSubvocal,
   competition,
   speedCap,
+  wordLength,
 }
 
 /// LR2 — Trace d'une session de lecture/exercice mesurée.
