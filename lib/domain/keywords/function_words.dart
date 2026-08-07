@@ -3,11 +3,11 @@
 /// sens, l'œil se posant sur les mots porteurs de contenu.
 ///
 /// On retient les catégories quasi vides de sens : articles, déterminants,
-/// prépositions, pronoms personnels/relatifs, conjonctions de liaison simples,
-/// auxiliaires être/avoir, et la particule « ne ». On **exclut volontairement**
-/// les mots qui portent du sens même s'ils sont courts : négations
-/// (pas, non, jamais, rien, aucun), connecteurs logiques (mais, car, donc),
-/// quantifieurs (tout, plus, très)… afin de ne pas dégrader la compréhension.
+/// prépositions, pronoms personnels/relatifs, conjonctions de liaison simples
+/// **et connecteurs logiques** (mais, car, donc), auxiliaires être/avoir, et la
+/// particule « ne ». On **exclut volontairement** les mots qui portent une
+/// charge sémantique forte même s'ils sont courts : négations (pas, non,
+/// jamais, rien, aucun) et quantifieurs (tout, plus, très)…
 const Set<String> kFrenchFunctionWords = {
   // Articles & déterminants
   'le', 'la', 'les', "l'", 'un', 'une', 'des', 'de', 'du', "d'",
@@ -18,8 +18,8 @@ const Set<String> kFrenchFunctionWords = {
   'à', 'au', 'aux', 'en', 'dans', 'sur', 'sous', 'par', 'pour',
   'avec', 'sans', 'chez', 'vers', 'entre', 'depuis', 'pendant',
   'selon', 'parmi', 'dès',
-  // Conjonctions de liaison simples
-  'et', 'ou', 'ni', 'que', "qu'", 'comme',
+  // Conjonctions de liaison simples et connecteurs logiques
+  'et', 'ou', 'ni', 'que', "qu'", 'comme', 'mais', 'car', 'donc',
   // Pronoms
   'je', "j'", 'tu', 'il', 'elle', 'on', 'nous', 'vous', 'ils', 'elles',
   'me', "m'", 'te', "t'", 'se', "s'", 'lui', 'y',

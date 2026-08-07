@@ -41,9 +41,15 @@ void main() {
       }
     });
 
-    test('préserve le sens : négations et connecteurs restent du contenu', () {
-      for (final w in ['pas', 'non', 'jamais', 'rien', 'mais', 'car', 'donc']) {
+    test('préserve les négations comme contenu', () {
+      for (final w in ['pas', 'non', 'jamais', 'rien']) {
         expect(isFunctionWord(w), isFalse, reason: w);
+      }
+    });
+
+    test('mais/car/donc sont bien classés mots-outils', () {
+      for (final w in ['mais', 'car', 'donc']) {
+        expect(isFunctionWord(w), isTrue, reason: w);
       }
     });
 
